@@ -1,2 +1,0 @@
-<ips:template parameters="$comment, $email" />
-{{if $comment->item()->isQuestion()}}{$email->language->addToStack("x_answered_a_question", FALSE, array( 'htmlsprintf' => array( $comment->author()->name ) ) )}{{else}}{$email->language->addToStack("x_replied_to_a_topic", FALSE, array( 'htmlsprintf' => array( $comment->author()->name ) ) )}{{endif}}: {$comment->item()->mapped('title')} ({$comment->url()})
