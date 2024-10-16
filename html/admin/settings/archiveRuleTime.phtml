@@ -1,0 +1,16 @@
+<ips:template parameters="$name, $value" />
+<select name="{$name}[0]">
+	<option value="<" {{if isset( $value[0] ) and $value[0] == '<'}}selected{{endif}}>{lang="greater_than"}</option>
+	<option value=">" {{if isset( $value[0] ) and $value[0] == '>'}}selected{{endif}}>{lang="less_than"}</option>
+</select>
+<input type="number" name="{$name}[1]" value="{{if isset( $value[1] )}}{$value[1]}{{endif}}" class="ipsField_short" min="0">
+<select name="{$name}[2]">
+	<option value="d" {{if isset( $value[2] ) and $value[2] == 'd'}}selected{{endif}}>{lang="days"}</option>
+	<option value="m" {{if isset( $value[2] ) and $value[2] == 'm'}}selected{{endif}}>{lang="months"}</option>
+	<option value="y" {{if isset( $value[2] ) and $value[2] == 'y'}}selected{{endif}}>{lang="years"}</option>
+</select>
+{lang="ago"} {lang="or"} 
+<span class='ipsCustomInput'>
+	<input type="checkbox" name="{$name}[3]" id='el{$name}_3' data-control="unlimited" {{if isset( $value[3] ) and $value[3]}}checked{{endif}}>
+	<span></span>
+</span> <label for='el{$name}_3' class='ipsField_unlimited'>{{if mb_strpos( $name, 'not' )}}{lang="no_restriction"}{{else}}{lang="any_time"}{{endif}}</label>

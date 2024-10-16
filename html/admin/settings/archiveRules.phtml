@@ -1,0 +1,11 @@
+<ips:template parameters="$form, $totalTopics, $existingCount, $existingPercentage" />
+<div data-controller="forums.admin.settings.archiveRules">
+	<div class="ipsPad ipsType_normal">{lang="archiving_blurb"}</div>
+	<div data-ipsSticky data-ipsSticky-spacing='60' class="ipsPad_half ipsAreaBackground_reset ipsType_center">
+		<strong>{lang="archive_rules_effects"}</strong><br>
+		<div class="ipsProgressBar">
+			<div class="ipsProgressBar_progress" style="width:{$existingPercentage}%" data-role="percentageBar"><span data-role="percentage">{$existingPercentage}</span>% (<span data-role="number">{$existingCount}</span>/{$totalTopics})</div>
+		</div>
+	</div>
+	{$form|raw}
+</div>
