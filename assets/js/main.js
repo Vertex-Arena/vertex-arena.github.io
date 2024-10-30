@@ -52,6 +52,64 @@ $(function () {
 		}
 	});
 
+	// Scroll to top button functionality
+	var backToTopButton = $("#back-to-top");
+
+	$(window).scroll(function () {
+		if ($(this).scrollTop() > 20) {
+			backToTopButton.fadeIn();
+		} else {
+			backToTopButton.fadeOut();
+		}
+	});
+
+	backToTopButton.click(function () {
+		$("html, body").animate({ scrollTop: 0 }, "smooth");
+	});
+
+	// Smooth scrolling using jQuery easing
+	document.querySelector('a[href="#team-area"]').addEventListener('click', function(event) {
+		event.preventDefault();
+		document.querySelector('#team-area').scrollIntoView({
+			behavior: 'smooth'
+		});
+	});
+
+	//Animation on page load
+	window.addEventListener('load', function() {
+		var circleAnimation = document.getElementById('circle-animation');
+		circleAnimation.addEventListener('animationend', function() {
+			document.body.classList.add('loaded');
+		});
+	});
+
+	document.addEventListener('DOMContentLoaded', function() {
+		const slider = document.querySelector('.slider');
+		const slides = Array.from(slider.children);
+		let totalWidth = 0;
+	
+		slides.forEach(slide => {
+			totalWidth += slide.offsetWidth;
+			const clone = slide.cloneNode(true);
+			slider.appendChild(clone);
+		});
+	
+		slider.style.width = `${totalWidth * 2}px`;
+	
+		let scrollAmount = 0;
+	
+		function scrollSlider() {
+			scrollAmount += 1;
+			if (scrollAmount >= totalWidth) {
+				scrollAmount = 0;
+			}
+			slider.style.transform = `translateX(-${scrollAmount}px)`;
+			requestAnimationFrame(scrollSlider);
+		}
+	
+		scrollSlider();
+	});
+
 	//Countdown
 
     $('[data-countdown]').each(function () {

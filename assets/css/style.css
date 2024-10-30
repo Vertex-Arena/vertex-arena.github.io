@@ -2,6 +2,157 @@
     01. Common CSS
 ===========================*/
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700|Space+Mono:400,700&display=swap");
+
+:root{
+  --orange:#B78831;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0A0A0A;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--orange);
+  border-radius: 10px;
+  border: 3px solid #0A0A0A;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #B78831;
+}
+
+::-moz-scrollbar {
+  width: 12px;
+}
+
+::-moz-scrollbar-track {
+  background: #0A0A0A;
+}
+
+::-moz-scrollbar-thumb {
+  background-color: var(--orange);
+  border-radius: 10px;
+  border: 3px solid #0A0A0A;
+}
+
+::-moz-scrollbar-thumb:hover {
+  background-color: #B78831;
+}
+
+::-ms-scrollbar {
+  width: 12px;
+}
+
+::-ms-scrollbar-track {
+  background: #0A0A0A;
+}
+
+::-ms-scrollbar-thumb {
+  background-color: var(--orange);
+  border-radius: 10px;
+  border: 3px solid #0A0A0A;
+}
+
+::-ms-scrollbar-thumb:hover {
+  background-color: #B78831;
+}
+
+#circle-animation {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 200vw;
+  height: 200vw;
+  background-color: var(--orange);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  animation: shrinkCircle 1s forwards;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-logo-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-logo-container .logo {
+  position: relative;
+  z-index: 2;
+}
+
+@keyframes shrinkCircle {
+  0% {
+      width: 200vw;
+      height: 200vw;
+  }
+  100% {
+      width: 0;
+      height: 0;
+  }
+}
+
+body.loaded #circle-animation {
+  display: none;
+}
+
+body {
+  font-weight: normal;
+  font-style: normal;
+  overflow-x: hidden;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+a:focus,
+input:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+
+body.loaded #circle-animation {
+  display: none;
+}
+
+@keyframes dots {
+  0%, 20% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  80% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+.animated-dots::after {
+  content: '...';
+  display: inline-block;
+  animation: dots 2s infinite;
+}
+
 body {
   font-weight: normal;
   font-style: normal;
@@ -37,6 +188,7 @@ button {
 a:focus,
 a:hover {
   text-decoration: none;
+  color: var(--orange);
 }
 
 i,
@@ -926,6 +1078,110 @@ p {
   text-align: center;
 }
 
+.vertex-discord:hover {
+  text-decoration: none;
+  color: var(--orange) !important;
+  transition: all 0.3s ease-in-out; 
+}
+
+.discord-icono {
+  visibility: hidden;
+  font-size: 18px;
+  color: var(--orange);
+  transition: transform 0.3s ease-in-out;
+  margin-right: 2px
+}
+
+.vertex-discord:hover .discord-icono {
+  transform: translateX(-5px); /* Adjust as needed */
+  visibility: visible;
+}
+
+.slider-container {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slider {
+  display: flex;
+  animation: scroll 20s linear infinite;
+}
+
+.slide {
+  flex: 0 0 30%; /* Cada slide ocupa el 30% del ancho */
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+@keyframes scroll {
+  0% {
+      transform: translateX(0);
+  }
+  100% {
+      transform: translateX(-100%);
+  }
+}
+
+.glassy-card {
+  background: #ffffff1a;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.vip-card {
+  background: linear-gradient(145deg, #ffffff1a, var(--orange)) !important;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.vip-card:hover {
+  transform: translateY(-1px) !important;
+  box-shadow: 0 8px 12px rgba(253, 224, 1, 0.2) !important;
+}
+
+.glassy-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.icon-title-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.icon-container {
+  text-align: center;
+  margin-right: 15px;
+}
+
+.icon-container i {
+  font-size: 40px;
+  color: var(--orange); /* Ajusta el color según tu preferencia */
+  background: rgba(255, 255, 255, 0.2);
+  padding: 10px;
+  border-radius: 50%;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+.glassy-card .card-title,
+.glassy-card .card-text {
+  color: white;
+}
+
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .countdown .single-count-content {
     padding: 0 30px;
@@ -1219,6 +1475,7 @@ main .main-wrapper.demo-06 .team-area .team-wrapper {
 main .main-wrapper.demo-06 .team-area .team-wrapper .team-item {
   width: calc(33.33% - 50px);
   margin: 0px 25px 50px;
+  border-radius: 0 10px 0 0;
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -1249,6 +1506,17 @@ main .main-wrapper.demo-06 .team-area .team-wrapper .team-item .team-img {
 
 main .main-wrapper.demo-06 .team-area .team-wrapper .team-item .team-img img {
   width: 100%;
+  border-radius: 0 20px 0 0;
+}
+
+main .main-wrapper.demo-06 .team-area .team-wrapper .team-item .team-img {
+  transition: all 0.3s ease-in-out;
+}
+
+main .main-wrapper.demo-06 .team-area .team-wrapper .team-item .team-img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 20px rgba(183, 136, 49, 0.5);
+  border-radius: 0 20px 0 0;
 }
 
 main .main-wrapper.demo-06 .team-area .team-wrapper .team-item .team-img .social-links {
@@ -1285,7 +1553,7 @@ main .main-wrapper.demo-06 .team-area .team-wrapper .team-item .team-img .social
 }
 
 main .main-wrapper.demo-06 .team-area .team-wrapper .team-item .team-img .social-links li a:hover {
-  color: #D5081A;
+  color: var(--orange);
 }
 
 main .main-wrapper.demo-06 .team-area .team-wrapper .team-item:hover .team-img .social-links {
@@ -1315,6 +1583,105 @@ main .footer {
 main .footer p {
   font-family: "Space Mono", sans-serif;
   color: rgba(255, 255, 255, 0.7);
+}
+
+#back-to-top {
+  position: fixed;
+  bottom: 5vh;
+  right: 5vw;
+  display: none;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.top-icon {
+  color: var(--orange);
+}
+
+@keyframes moveDown {
+  0% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(10px);
+  }
+  100% {
+      transform: translateY(0);
+  }
+}
+
+.animate-down {
+  animation: moveDown 1s infinite;
+}
+
+.why-choose-us {
+  background: url('../img/fondo-why-choose-us.png') no-repeat center center;
+  background-size: cover;
+  padding: 50px 0;
+  margin-bottom: 50px;
+  position: relative;
+  z-index: 1;
+  border-radius: 10px;
+}
+
+.why-choose-us::before {
+  border-radius: 10px;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--orange);
+  opacity: 0.2; /* Adjust the opacity as needed */
+  z-index: -1;
+}
+
+.glassy-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glassy-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 12px rgba(255, 255, 255, 0.2);
+}
+
+.icon-title-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.icon-container {
+  text-align: center;
+  margin-right: 15px;
+}
+
+.icon-container i {
+  font-size: 40px;
+  color: rgba(255, 184, 61, 0.556); /* Ajusta el color según tu preferencia */
+  background: rgba(255, 255, 255, 0.053);
+  padding: 10px;
+  border-radius: 10%;
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+.glassy-card .card-title,
+.glassy-card .card-text {
+  color: white;
 }
 
 @media (max-width: 767px) {
