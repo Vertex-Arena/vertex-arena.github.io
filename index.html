@@ -1,23 +1,33 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="es">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>www.vertex.com.ar</title>
-        <meta name="description" content="">
+        <title>Vertex Arena - Servidores de CS:GO e IOSoccer</title>
+        <meta name="description" content="Vertex Arena ofrece los mejores servidores de CS:GO e IOSoccer. Únete a nuestra comunidad y disfruta de una experiencia de juego inigualable.">
+        <meta name="keywords" content="CS:GO, IOSoccer, servidores, gaming, comunidad, Vertex Arena">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
         <meta name="author" content="vertexar">
-		<link rel="shortcut icon" type="image/x-icon" href="assets/img/icon.png">
-        <!-- Place favicon.ico in the root directory -->
-
-		<!-- ========================= CSS here ========================= -->
-		<link rel="stylesheet" href="assets/css/bootstrap-4.5.0.min.css">
+        <link rel="shortcut icon" type="image/x-icon" href="assets/img/icon.png">
+        <!-- ========================= CSS here ========================= -->
+        <link rel="stylesheet" href="assets/css/bootstrap-4.5.0.min.css">
+        <script src="https://kit.fontawesome.com/170300427c.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="assets/css/lineicons.css">
-		<link rel="stylesheet" href="assets/css/animate.css">
-		<link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/animate.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <!-- Open Graph Meta Tags -->
+        <meta property="og:title" content="Vertex Arena - Servidores de CS:GO e IOSoccer">
+        <meta property="og:description" content="Vertex Arena ofrece los mejores servidores de CS:GO e IOSoccer. Únete a nuestra comunidad y disfruta de una experiencia de juego inigualable.">
+        <meta property="og:image" content="assets/img/logo.gif">
+        <meta property="og:url" content="https://www.vertex.com.ar">
+        <meta property="og:type" content="website">
     </head>
     <body>
+        <div id="circle-animation">
+            <div class="circle white-circle"></div>
+            <div class="circle orange-circle"></div>
+            <div class="circle black-circle"></div>
+        </div>
         <!--[if lte IE 9]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
         <![endif]-->
@@ -29,11 +39,20 @@
                 <div class="container">
                     <div class="row align-items-center">
                         <div class="col-md-4">
-                            <a href="index.html" class="logo"> <img src="assets/img/logo.gif" alt=""></a>
+                            <div class="header-logo-container">
+                                <a href="index.html" class="logo">
+                                    <img src="assets/img/logo.gif" alt="Vertex Arena Logo">
+                                </a>
+                            </div>
                         </div>
                         <div class="col-md-8">
                             <div class="header-right text-right">
-                                <a href="https://dsc.gg/vertexar" target="_blank">Discord</a>
+                                <i class="discord-icono fa-brands fa-discord"></i>
+                                <a class="vertex-discord" href="https://dsc.gg/vertexar" target="_blank">Discord</a>
+                            </div>
+                            <div class="header-right text-right">
+                                <i class="discord-icono fa-brands fa-discord"></i>
+                                <a class="vertex-discord" href="catalogo.html" target="_blank">Catalogo de Juegos</a>
                             </div>
                         </div>
                     </div>
@@ -49,7 +68,9 @@
                             <div class="col-xl-12">
                                 <!-- heading start  -->
                                 <div class="heading">
-                                    <h1 class="text-white wow fadeInUp" data-wow-delay=".2s">Estamos <br> llegando..</h1>
+                                    <h1 class="text-white wow fadeInUp" data-wow-delay=".2s">
+                                        Estamos <br> llegando<strong class="animated-dots" style="color: var(--orange)"></strong>
+                                    </h1>                          
                                 </div>
                                 <!-- heading end  -->
                             </div>
@@ -59,23 +80,218 @@
                                 <!-- countdown end  -->
                             </div>
                             <div class="col-xl-5 col-lg-5">
-                                <!-- desc strat  -->
+                                <!-- desc start  -->
                                 <p class="wow fadeInLeft" data-wow-delay=".4s">Más que una comunidad, <br><strong>una FAMILIA.</strong></p>
                                 <!-- desc end  -->
+                            </div>
+                            <div class="col-xl-12 text-center">
+                                <!-- double arrow start  -->
+                                <div class="double-arrow wow fadeInUp" data-wow-delay=".6s">
+                                    <a href="#team-area" style="color: var(--orange)">
+                                        <i class="fas fa-angle-double-down animate-down"></i>
+                                    </a>
+                                </div>
+                                <!-- double arrow end  -->
                             </div>
                         </div>
                     </div>
                 </div>
                 <!-- hero-area end  -->
-                <!-- team-area start  -->
-                <div class="team-area">
+                <!-- about us start-->
+                <section id="about-us" class="why-choose-us">
+                    <div class="container" style="padding: 0 0 0 50px">
+                        <div class="row">
+                            <div class="col-xl-12 text-center">
+                                <!-- heading start  -->
+                                <div class="heading" style="padding: 50px 0">
+                                    <h1 class="text-white wow fadeInUp" data-wow-delay=".2s">¿Por qué <strong>Elegirnos?</strong></h1>
+                                </div>
+                                <!-- heading end  -->
+                            </div>
+                            <div class="col-xl-4 col-lg-4 p-2">
+                                <!-- card start  -->
+                                <div class="card wow fadeInUp glassy-card" data-wow-delay=".4s">
+                                    <div class="card-body">
+                                        <div class="icon-title-container">
+                                            <div class="icon-container">
+                                                <i class="fas fa-briefcase"></i> <!-- Icono para "Experiencia" -->
+                                            </div>
+                                            <h4 class="card-title">Experiencia</h4>
+                                        </div>
+                                        <p class="card-text">Contamos con un equipo altamente experimentado en el desarrollo de software y gestión de comunidades.</p>
+                                    </div>
+                                </div>
+                                <!-- card end  -->
+                            </div>
+                            <div class="col-xl-4 col-lg-4 p-2">
+                                <!-- card start  -->
+                                <div class="card wow fadeInUp glassy-card" data-wow-delay=".6s">
+                                    <div class="card-body">
+                                        <div class="icon-title-container">
+                                            <div class="icon-container">
+                                                <i class="fas fa-lightbulb"></i> <!-- Icono para "Innovación" -->
+                                            </div>
+                                            <h4 class="card-title">Innovación</h4>
+                                        </div>
+                                        <p class="card-text">Siempre estamos a la vanguardia de las últimas tecnologías y tendencias para ofrecer lo mejor en nuestros servidores.</p>
+                                    </div>
+                                </div>
+                                <!-- card end  -->
+                            </div>
+                            <div class="col-xl-4 col-lg-4 p-2">
+                                <!-- card start  -->
+                                <div class="card wow fadeInUp glassy-card" data-wow-delay=".8s">
+                                    <div class="card-body">
+                                        <div class="icon-title-container">
+                                            <div class="icon-container">
+                                                <i class="fas fa-users"></i> <!-- Icono para "Comunidad" -->
+                                            </div>
+                                            <h4 class="card-title">Comunidad</h4>
+                                        </div>
+                                        <p class="card-text">Más que una comunidad, somos una familia que se apoya mutuamente en cada paso del camino.</p>
+                                    </div>
+                                </div>
+                                <!-- card end  -->
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- about us end-->
+                <!-- vip start  -->
+                <section id="vip-benefits" class="vip-benefits">
                     <div class="container">
                         <div class="row">
-                            <div class="col-xl-9">
+                            <div class="col-xl-12 text-center">
+                                <div class="heading">
+                                    <h1 class="text-white wow fadeInUp" data-wow-delay=".2s">Beneficios <strong>VIP</strong></h1>
+                                </div>
+                            </div>
+                            <div class="col-xl-12">
+                                <div class="slider-container">
+                                    <div class="slider">
+                                        <div class="slide">
+                                            <div class="card glassy-card vip-card">
+                                                <div class="card-body">
+                                                    <div class="icon-title-container">
+                                                        <div class="icon-container">
+                                                            <i class="fas fa-user-shield"></i>
+                                                        </div>
+                                                        <h4 class="card-title" style="color: var(--orange)">Slot Reservado</h4>
+                                                    </div>
+                                                    <p class="card-text">¡Podes entrar al Servidor por más que este lleno!</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="slide">
+                                            <div class="card glassy-card vip-card">
+                                                <div class="card-body">
+                                                    <div class="icon-title-container">
+                                                        <div class="icon-container">
+                                                            <i class="fas fa-vote-yea"></i>
+                                                        </div>
+                                                        <h4 class="card-title" style="color: var(--orange)">Menu de Votaciones</h4>
+                                                    </div>
+                                                    <p class="card-text">¡Tenés un menu totalmente EXCLUSIVO donde podés votar para Kickear Jugadores, Cambiar skin de Balón, Habilitar repeticiones y más</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="slide">
+                                            <div class="card glassy-card vip-card">
+                                                <div class="card-body">
+                                                    <div class="icon-title-container">
+                                                        <div class="icon-container">
+                                                            <i class="fas fa-arrows-alt"></i>
+                                                        </div>
+                                                        <h4 class="card-title" style="color: var(--orange)">Menu de Escala</h4>
+                                                    </div>
+                                                    <p class="card-text">Podes variar la escala de tu jugador entre pequeño o grande</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="slide">
+                                            <div class="card glassy-card vip-card">
+                                                <div class="card-body">
+                                                    <div class="icon-title-container">
+                                                        <div class="icon-container">
+                                                            <i class="fas fa-palette"></i>
+                                                        </div>
+                                                        <h4 class="card-title" style="color: var(--orange)">RGB</h4>
+                                                    </div>
+                                                    <p class="card-text">Así como lo lees, ¡podés poner tu personaje en <p style="background: linear-gradient(80deg, rgb(255, 68, 0), rgba(53, 255, 2), rgb(16, 47, 247), rgb(55, 0, 255), blue, rgb(0, 34, 255), violet);-webkit-background-clip: text;color: transparent;background-clip: text;">R G B!</p></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="slide">
+                                            <div class="card glassy-card vip-card">
+                                                <div class="card-body">
+                                                    <div class="icon-title-container">
+                                                        <div class="icon-container">
+                                                            <i class="fas fa-crown"></i>
+                                                        </div>
+                                                        <h4 class="card-title" style="color: var(--orange)">Menu VIP</h4>
+                                                    </div>
+                                                    <p class="card-text">Tenes un menu VIP en el cual tenes información de:
+                                                        <br>Tu Juego (Ping/SteamID/Tiempo de Juego)
+                                                        <br>Tu VIP (Beneficios e Información)
+                                                        <br>Acceder a todo lo anterior dicho directamente con el teclado numerico en el menu
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="payment-methods" class="payment-methods">
+                    <div class="container" style="background-size: cover; background-repeat: no-repeat;">
+                        <div class="row align-items-center" style="background-size: cover; background-repeat: no-repeat;">
+                            <div class="col-lg-6" style="background-size: cover; background-repeat: no-repeat;">
+                                <h1 class="wow fadeInUp animated" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp; color: var(--orange)">Medios de pago</h2>
+                            </div>
+                            <div class="col-lg-6" style="background-size: cover; background-repeat: no-repeat;">
+                                <div class="row g-4" style="background-size: cover; background-repeat: no-repeat;">
+                                    <div class="col-sm-2 col-4" style="background-size: cover; background-repeat: no-repeat;">
+                                        <div class="p-2 rounded-10 bgcustom" data-bgcolor="rgba(255, 255, 255, .05)" style="background-color: rgba(255, 255, 255, 0.05); background-size: cover; background-repeat: no-repeat; height: 100%; align-self: center">
+                                            <img src="assets/img/visa.png" class="img-fluid" alt="Visa">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-2 col-4" style="background-size: cover; background-repeat: no-repeat;">
+                                        <div class="p-2 rounded-10 bgcustom" data-bgcolor="rgba(255, 255, 255, .05)" style="background-color: rgba(255, 255, 255, 0.05); background-size: cover; background-repeat: no-repeat; height: 100%; align-self: center">
+                                            <img src="assets/img/mastercard.png" class="img-fluid" alt="Mastercard">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-2 col-4" style="background-size: cover; background-repeat: no-repeat;">
+                                        <div class="p-2 rounded-10 bgcustom" data-bgcolor="rgba(255, 255, 255, .05)" style="background-color: rgba(255, 255, 255, 0.05); background-size: cover; background-repeat: no-repeat; height: 100%; align-self: center">
+                                            <img src="assets/img/paypal.png" class="img-fluid" alt="PayPal">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-2 col-4" style="background-size: cover; background-repeat: no-repeat;">
+                                        <div class="p-2 rounded-10 bgcustom" data-bgcolor="rgba(255, 255, 255, .05)" style="background-color: rgba(255, 255, 255, 0.05); background-size: cover; background-repeat: no-repeat; height: 100%; align-self: center">
+                                            <img src="assets/img/mercado-pago.png" class="img-fluid" alt="Mercado Pago">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-2 col-4" style="background-size: cover; background-repeat: no-repeat;">
+                                        <div class="p-2 rounded-10 bgcustom" data-bgcolor="rgba(255, 255, 255, .05)" style="background-color: rgba(255, 255, 255, 0.05); background-size: cover; background-repeat: no-repeat; height: 100%; align-self: center">
+                                            <img src="assets/img/uala.png" class="img-fluid" alt="Ualá">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- vip end  -->
+                <!-- team-area start  -->
+                <section id="team-area" class="team-area py-5">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xl-9 py-5">
                                 <!-- section-title start  -->
-                                <div class="section-title text-align-items-centerr">
-                                    <h1 class="wow fadeInUp" data-wow-delay=".4s">Conoce a nuestro equipo dedicado al <strong>desarrollo.</strong></h1>
-									<h2 class="wow fadeInUp" data-wow-delay=".2s">Codificadores</h2>
+                                <div id="team-area" class="section-title text-align-items-centerr">
+                                    <h1 class="wow fadeInUp" data-wow-delay=".4s">Conoce a nuestro equipo dedicado al <strong style="color: var(--orange)">desarrollo.</strong></h1>
+									<h2 class="wow fadeInUp" data-wow-delay=".2s">Desarrolladores</h2>
                                 </div>
                                 <!-- section-title end  -->
                             </div>
@@ -85,7 +301,7 @@
                             <!-- team-item start  -->
                             <div class="team-item wow fadeInUp" data-wow-delay=".2s">
                                 <div class="team-img">
-                                    <img src="assets/img/inactivo.png" alt="">
+                                    <img src="assets/img/inactivo.png" alt="Foto de perfil de Inactivo">
                                     <ul class="social-links">
                                         <li><a href="https://github.com/inactivood" target="_blank"><i class="lni lni-github-original"></i></a></li>                                     
                                     </ul>
@@ -101,11 +317,18 @@
                             <!-- team-item start  -->
                             <div class="team-item wow fadeInUp" data-wow-delay=".4s">
                                 <div class="team-img">
-                                    <img src="assets/img/img-2.jpg" alt="">
+                                    <img src="assets/img/bussetto.png" alt="Foto de perfil de Bussetto">
+                                    <ul class="social-links">
+                                        <li><a href="https://twitch.tv/Bussettinho" target="_blank"><i class="fa-brands fa-twitch"></i></a></li>
+                                        <li><a href="https://github.com/Bussetto" target="_blank"><i class="lni lni-github-original"></i></a></li>
+                                        <li><a href="https://youtube.com/@Bussettinho?sub_confirmation=1" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>                                     
+                                    </ul>
                                 </div>
                                 <div class="team-info">
-                                    <h4>???</h4>
-                                    <p>???</p>
+                                    <h4>Bussetto</h4>
+                                    <p>Desarrollador Web</p>
+                                    <p>Creador de Contenido</p>
+                                    <p>Aparece 1 vez cada 3 meses</p>
                                 </div>
                             </div>
                             <!-- team-item end  -->
@@ -121,15 +344,15 @@
                             </div>
                             <!-- section-title start  -->
                             <div class="section-title text-align-items-centerr">
-                            <h1 class="wow fadeInUp" data-wow-delay=".4s">Conoce a nuestro equipo dedicado a la <strong>comunidad.</strong></h1>
-                            <h2 class="wow fadeInUp" data-wow-delay=".2s">Moderación e Soporte</h2>
+                            <h1 class="wow fadeInUp" data-wow-delay=".4s">Conoce a nuestro equipo dedicado a la <strong style="color: var(--orange)">comunidad.</strong></h1>
+                            <h2 class="wow fadeInUp" data-wow-delay=".2s">Moderación & Soporte</h2>
                             </div>
                             <!-- section-title end  -->
                             <div class="team-wrapper">
                                 <!-- team-item start  -->
                                 <div class="team-item wow fadeInUp" data-wow-delay=".2s">
                                     <div class="team-img">
-                                        <img src="assets/img/turko.png" alt="">
+                                        <img src="assets/img/turko.png" alt="Foto de perfil de Turko">
                                         <ul class="social-links">
                                             <li><a href="https://github.com/Turkitooo" target="_blank"><i class="lni lni-github-original"></i></a></li>                                     
                                         </ul>
@@ -144,7 +367,7 @@
                                 <!-- team-item start  -->
                                 <div class="team-item wow fadeInUp" data-wow-delay=".4s">
                                     <div class="team-img">
-                                        <img src="assets/img/kliy.png" alt="">
+                                        <img src="assets/img/kliy.png" alt="Foto de perfil de Kliy">
                                     </div>
                                     <div class="team-info">
                                         <h4>Kliy</h4>
@@ -161,16 +384,12 @@
                                     </div>
                                     <div class="team-info">
                                         <h4>Dert</h4>
-                                        <p>???</p>
+                                        <p>Administrador e Empresario multi-millonario en Vertex Arena</p>
                                     </div>
                                 </div>
                                 <div class="team-item wow fadeInUp" data-wow-delay=".6s">
                                     <div class="team-img">
-                                        <img src="assets/img/img-3.jpg" alt="">
-                                    </div>
-                                    <div class="team-info">
-                                        <h4>Kiko</h4>
-                                        <p>Jugador de 2000hs en el IOS</p>
+                                        <img src="assets/img/img-3.jpg" alt="Foto de perfil de Kiko">
                                     </div>
                                 </div>
                                 </div>
@@ -182,18 +401,22 @@
                 </div> <!-- end container  -->
                 <!-- team-area end  -->
             </div>
+            <a id="back-to-top" href="#" class="btn btn-primary back-to-top" role="button" title="Click to return on the top page" data-toggle="tooltip" data-placement="left">
+                <i class="top-icon fas fa-chevron-up"></i>
+            </a>
             <!-- ========================= main-wrapper end ========================= -->
             <!-- footer start  -->
-            <div class="footer">
+            <footer class="footer">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-7">
                             <div class="copyright wow fadeInLeft" data-wow-delay=".2s">
+                                <p>&copy; 2023 Vertex Arena. Todos los derechos reservados.</p>
                                 <p>Realizado por <strong><a href="https://github.com/inactivood" target="_blank">inactivo</a></strong></p>
                         </div>
                     </div>
                 </div>
-            </div>
+            </footer>
             <!-- footer end  -->
         </main>
         <!-- ========================= main end ========================= -->
