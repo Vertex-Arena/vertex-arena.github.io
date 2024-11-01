@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohawk de Colores</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+
+    <link rel="icon" href="images/icon.png" type="logo vertex">
+
+    <script src="./js/tutorial.js"></script>
+    <link href="css/tutorial.css" rel="stylesheet" type="text/css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="./js/main.js"></script>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">    
+    <script src="https://kit.fontawesome.com/170300427c.js" crossorigin="anonymous"></script>
+    <link href="css/styles.css" rel="stylesheet" type="text/css" />
+
+    <style>
+
+        /* iframe (pdf, youtube) */
+        .pdf-preview {
+            border: none; 
+            width: 100%; /* ancho */
+            height: 600px; /* altura*/
+        }
+
+        /* scrollbar */
+        ::-webkit-scrollbar {
+    width: 12px; 
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: #a66b0c; 
+    border-radius: 10px; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a66b0c; 
+}
+
+
+/* botón volver */
+.btn-volver {
+    display: inline-flex;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.btn-volver:hover {
+    transform: translateX(-10px); /* Mueve el botón hacia la izquierda */
+}
+
+.btn-volver::before {
+    content: ''; /* Eliminar el contenido de la flecha */
+    margin-right: 5px; /* Espacio entre la flecha y el texto */
+    transition: transform 0.3s ease;
+}
+
+.btn-volver:hover::before {
+    transform: translateX(-10px); /* Mueve la flecha hacia la izquierda */
+}
+
+body.modal-open {
+            overflow: hidden; /* Deshabilita el desplazamiento */
+        }
+
+/* imagenes*/
+
+        #imageModal.show {
+    display: flex;
+    animation: fadeIn 0.3s forwards;
+}
+
+#imageModal.hide {
+    animation: fadeOut 0.3s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+    </style>
+</head>
+<body class="bg-white">
+
+    <nav class="flex justify-between items-center">
+        <div class="flex flex-col items-center">
+            <a href="/">
+                <img src="./images/vertexblogdark.png" alt="Vertex Logo" width="165" height="16" />
+            </a>
+            <a href="blog.html" class="mt-2 bg-yellow-500 text-white rounded-full py-1 px-2 text-xs text-center btn-volver">
+                &#8592; Volver
+            </a>             
+        
+        </div>
+
+    
+        <div>
+            <div class="flex items-center justify-end space-x-4">
+                <div class="btn btn--border btn--primary btn--animated" style="margin-left: 10px;">
+                    <a href="../index.html" onclick="event.preventDefault(); window.location.href='../index.html';">
+                        <strong>Página principal</strong>
+                    </a>
+                </div>
+                <div class="btn btn--border btn--primary btn--animated" style="margin-left: 10px;">
+                    <a href="https://dsc.gg/vertexar" onclick="event.preventDefault(); window.location.href='https://dsc.gg/vertexar';">
+                        <strong>Discord</strong>
+                    </a>
+                </div>
+                <div class="btn btn--border btn--primary btn--animated" style="margin-left: 10px;">
+                    <a href="https://github.com/inactivood" onclick="event.preventDefault(); window.location.href='https://github.com/inactivood';">
+                        <strong>GitHub</strong>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="max-w-4xl mx-auto p-6">
+        <h1 class="text-4xl font-bold mb-4" id="tutorial-title">Tutorial de instalación de <strong>MOHAWKS</strong> para IOSoccer</h1>
+        <p id="tutorial-content">Realiza un <strong>backup total</strong> de tu juego antes de instalar este pack de assets. <strong>No tener uno implica a que si su juego se daña, no me hago cargo del mismo.</strong></p>
+        <p></p>
+
+
+<!-- Photos Section -->
+<div class="my-6 grid grid-cols-3 gap-4">
+    <img src="./other/other-img/moh1.jpg" alt="a" class="rounded-md cursor-pointer" onclick="openModal(this.src, 0)">
+    <img src="./other/other-img/moh2.jpg" alt="a" class="rounded-md cursor-pointer" onclick="openModal(this.src, 1)">
+    <img src="./other/other-img/moh3.jpg" alt="a" class="rounded-md cursor-pointer" onclick="openModal(this.src, 2)">
+    <img src="./other/other-img/moh4.jpg" alt="a" class="rounded-md cursor-pointer" onclick="openModal(this.src, 3)">
+    <img src="./other/other-img/moh5.jpg" alt="a" class="rounded-md cursor-pointer" onclick="openModal(this.src, 4)">
+    <img src="./other/other-img/moh6.jpg" alt="a" class="rounded-md cursor-pointer" onclick="openModal(this.src, 5)">
+    <img src="./other/other-img/moh7.jpg" alt="a" class="rounded-md cursor-pointer" onclick="openModal(this.src, 6)">
+</div>
+
+
+<!-- Modal for enlarged image -->
+<div id="imageModal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center hidden" onclick="closeModal()">
+    <div class="relative">
+        <img id="modalImage" class="max-w-full max-h-full transition-transform duration-300" src="" alt="Enlarged Image">
+        <button class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white text-black rounded-full p-2" onclick="prevImage(event)" style="color: orange;">
+            <i class="fas fa-chevron-left"></i> <!-- Icono de Font Awesome para el botón anterior -->
+        </button>
+        <button class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white text-black rounded-full p-2" onclick="nextImage(event)" style="color: orange;">
+            <i class="fas fa-chevron-right"></i> <!-- Icono de Font Awesome para el botón siguiente -->
+        </button>
+    </div>
+</div>
+
+        <!-- Tutorial Steps -->
+        <strong class="text-xl mt-4 block">¿No te funciona? Chequea...</strong>
+        <ul class="list-disc list-inside mt-2">
+            <li>
+                <strong>Pegar bien los archivos</strong>
+                <p>Recuerda de pegar bien todos los archivos dentro del .RAR en <em>C:\Program Files (x86)\Steam\steamapps\common\IOSoccer</em></p>
+            </li>
+            <li>
+                <strong>Tener tu IOS limpio de Assets ajenos</strong>
+                <p>Recuerda que para que tu IOSoccer tenga más compatibilidad con el asset, es mejor tenerlo <strong>limpio</strong> dentro de todo.</p>
+            </li>
+            <li>
+                <strong>Tener DirectX9 o superior</strong>
+                <p>Recuerda poseer una versión superior a DirectX9 ya que el Source Engine que utiliza IOSoccer puede ser un poco vieja, pero no tan vieja...</p>
+            </li>
+            <li>
+                <strong>Leer todos los archivos .txt</strong>
+                <p>Recuerda leer los archivos <strong>.txt</strong> que posee el pack de asset, alli mismo tiene un tutorial sobre donde pegar cada cosa... </p>
+            </li>
+        </ul>
+
+<!-- Download Section -->
+<div class="my-6">
+    <strong class="text-xl mt-4 block">Descargas</strong>
+    <ul class="list-disc list-inside mt-2">
+        <li class="my-2">
+            <a href="./other/downloads/mohawks.rar" class="bg-yellow-500 text-white font-bold rounded-full py-2 px-4 inline-block hover:bg-blue-600 transition duration-300 ease-in-out transform hover:scale-105">Mohawks.rar</a>
+        </li>
+    </ul>
+</div>
+
+<script>
+let currentImageIndex = 0;
+const images = [
+    "./other/other-img/moh1.jpg",
+    "./other/other-img/moh2.jpg",
+    "./other/other-img/moh3.jpg",
+    "./other/other-img/moh4.jpg",
+    "./other/other-img/moh5.jpg",
+    "./other/other-img/moh6.jpg",
+    "./other/other-img/moh7.jpg"
+];
+
+function openModal(imageSrc, index) {
+    currentImageIndex = index;
+    const modal = document.getElementById('imageModal');
+    const modalImage = document.getElementById('modalImage');
+    modalImage.src = imageSrc;
+    modal.classList.remove('hidden');
+    modal.classList.add('show');
+    document.body.classList.add('modal-open'); // Deshabilita el desplazamiento
+}
+
+function closeModal() {
+    const modal = document.getElementById('imageModal');
+    modal.classList.remove('show');
+    modal.classList.add('hide');
+    setTimeout(() => {
+        modal.classList.add('hidden');
+        document.body.classList.remove('modal-open'); // Habilita el desplazamiento
+    }, 300); // Tiempo de duración de la animación
+}
+
+function nextImage(event) {
+    event.stopPropagation(); // Evita que se cierre el modal
+    currentImageIndex = (currentImageIndex + 1) % images.length; // Ciclo a la siguiente imagen
+    const modalImage = document.getElementById('modalImage');
+    modalImage.src = images[currentImageIndex];
+}
+
+function prevImage(event) {
+    event.stopPropagation(); // Evita que se cierre el modal
+    currentImageIndex = (currentImageIndex - 1 + images.length) % images.length; // Ciclo a la imagen anterior
+    const modalImage = document.getElementById('modalImage');
+    modalImage.src = images[currentImageIndex];
+}
+
+</script>
+
+
+
+
+</body>
+</html>

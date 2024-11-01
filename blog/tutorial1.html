@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hammer++ Tutorial</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+
+    <link rel="icon" href="images/icon.png" type="logo vertex">
+
+
+    <script src="./js/main.js"></script>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">    
+    <script src="https://kit.fontawesome.com/170300427c.js" crossorigin="anonymous"></script>
+    <link href="css/styles.css" rel="stylesheet" type="text/css" />
+
+    <style>
+
+        /* iframe (pdf, youtube) */
+        .pdf-preview {
+            border: none; 
+            width: 100%; /* ancho */
+            height: 600px; /* altura*/
+        }
+
+        /* scrollbar */
+        ::-webkit-scrollbar {
+    width: 12px; 
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: #a66b0c; 
+    border-radius: 10px; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a66b0c; 
+}
+
+
+/* botón volver */
+.btn-volver {
+    display: inline-flex;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.btn-volver:hover {
+    transform: translateX(-10px); /* Mueve el botón hacia la izquierda */
+}
+
+.btn-volver::before {
+    content: ''; /* Eliminar el contenido de la flecha */
+    margin-right: 5px; /* Espacio entre la flecha y el texto */
+    transition: transform 0.3s ease;
+}
+
+.btn-volver:hover::before {
+    transform: translateX(-10px); /* Mueve la flecha hacia la izquierda */
+}
+
+
+    </style>
+</head>
+<body class="bg-white">
+
+    <nav class="flex justify-between items-center">
+        <div class="flex flex-col items-center">
+            <a href="/">
+                <img src="./images/vertexblogdark.png" alt="Vertex Logo" width="165" height="16" />
+            </a>
+            <a href="blog.html" class="mt-2 bg-yellow-500 text-white rounded-full py-1 px-2 text-xs text-center btn-volver">
+                &#8592; Volver
+            </a>             
+        
+        </div>
+
+    
+        <div>
+            <div class="flex items-center justify-end space-x-4">
+                <div class="btn btn--border btn--primary btn--animated" style="margin-left: 10px;">
+                    <a href="../index.html" onclick="event.preventDefault(); window.location.href='../index.html';">
+                        <strong>Página principal</strong>
+                    </a>
+                </div>
+                <div class="btn btn--border btn--primary btn--animated" style="margin-left: 10px;">
+                    <a href="https://dsc.gg/vertexar" onclick="event.preventDefault(); window.location.href='https://dsc.gg/vertexar';">
+                        <strong>Discord</strong>
+                    </a>
+                </div>
+                <div class="btn btn--border btn--primary btn--animated" style="margin-left: 10px;">
+                    <a href="https://github.com/inactivood" onclick="event.preventDefault(); window.location.href='https://github.com/inactivood';">
+                        <strong>GitHub</strong>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="max-w-4xl mx-auto p-6">
+        <h1 class="text-4xl font-bold mb-4" id="tutorial-title">Tutorial de instalación de <strong>Hammer++</strong> para IOSoccer</h1>
+        <p id="tutorial-content">Esto tendrá mucho texto... Pero vale la pena.</p>
+        
+        <!-- PDF Section -->
+        <div class="my-6">
+            <h2 class="text-2xl font-bold mb-2">PDF de Instalación</h2>
+            <iframe src="\other\hammer.pdf" class="pdf-preview"></iframe>
+        </div>
+
+<!-- Video Section -->
+<div class="my-6 flex justify-between">
+    <div class="w-1/2 pl-2">
+        <h2 class="text-2xl font-bold mb-2">Video Mapping</h2>
+        <video width="100%" controls>
+            <source src="/other/videos/mapping.mp4" type="video/mp4">
+            Tu navegador no soporta el elemento de video.
+        </video>
+    </div>
+</div>
+
+        <!-- Tutorial Steps -->
+        <strong class="text-xl mt-4 block">¿No te funciona? Chequea...</strong>
+        <ul class="list-disc list-inside mt-2">
+            <li>
+                <strong>Pegar bien las texturas del SDK</strong>
+                <p>Recuerda de pegar bien todo lo relacionado al SDK de IOSoccer <em>C:\Program Files (x86)\Steam\steamapps\common\IOSoccer\sdk</em></p>
+            </li>
+            <li>
+                <strong>Tener bien instalado el SDK de Hammer++ y IOSoccer</strong>
+                <p>Recuerda que debes de instalar la versión <strong>SDK 2013 Multiplayer</strong> dentro de la página de Hammer++</p>
+            </li>
+            <li>
+                <strong>Tener DirectX9 o superior</strong>
+                <p>Recuerda poseer una versión superior a DirectX9 ya que el Source Engine que utiliza IOSoccer puede ser un poco vieja, pero no tan vieja...</p>
+            </li>
+            <li>
+                <strong>Pegar correctamente iosoccer.fdg</strong>
+                <p>Recuerda configurar bien el archivo <strong>.fdg</strong> de IOSoccer en los archivos de configuración de <strong>Hammer++</strong></p>
+            </li>
+        </ul>
+
+<!-- Download Section -->
+<div class="my-6">
+    <strong class="text-xl mt-4 block">Descargas</strong>
+    <ul class="list-disc list-inside mt-2">
+        <li class="my-2">
+            <a href="https://ficool2.github.io/HammerPlusPlus-Website/download.html" class="bg-yellow-500 text-white font-bold rounded-full py-2 px-4 inline-block hover:bg-blue-600 transition duration-300 ease-in-out transform hover:scale-105">Hammer++</a>
+        </li>
+        <li class="my-2">
+            <a href="./other/downloads/templates.zip" class="bg-yellow-500 text-white font-bold rounded-full py-2 px-4 inline-block hover:bg-blue-600 transition duration-300 ease-in-out transform hover:scale-105">Templates</a>
+        </li>
+        <li class="my-2">
+            <a href="\other\downloads\pakrat.rar" class="bg-yellow-500 text-white font-bold rounded-full py-2 px-4 inline-block hover:bg-blue-600 transition duration-300 ease-in-out transform hover:scale-105">Pakrat</a>
+        </li>
+    </ul>
+</div>
+</body>
+</html>
