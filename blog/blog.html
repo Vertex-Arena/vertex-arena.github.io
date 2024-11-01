@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vertex Blog - Assets & Tutoriales</title>
+    
+    <link rel="icon" href="images/icon.png" type="logo vertex">
+
+
+    <script src="./js/main.js"></script>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">    
+    <script src="https://kit.fontawesome.com/170300427c.js" crossorigin="anonymous"></script>
+    <link href="css/styles.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+
+    <style>
+        @keyframes rainbow {
+            0% { color: red; }
+            14% { color: orange; }
+            28% { color: yellow; }
+            42% { color: green; }
+            57% { color: blue; }
+            71% { color: indigo; }
+            85% { color: violet; }
+            100% { color: red; }
+        }
+        .rainbow-text {
+            animation: rainbow 3s infinite;
+        }
+    </style>
+
+    <section class="px-6 py-4">
+        
+        <nav class="flex justify-between items-center">
+            <div>
+                <a href="./blog.html">
+                    <img id="logo" src="./images/vertexblogdark.png" alt="Vertex Logo" width="165" height="16" />
+                </a>
+            </div>
+            <div>
+                <div class="flex items-center justify-end space-x-4">
+                    <button id="toggle-dark-mode" class="bg-yellow-500 ml-3 rounded-full text-xs font-semi-bold text-white uppercase py-3 px-5 flex items-center">
+                        <i id="dark-mode-icon" class="fas fa-sun"></i>
+                    </button>
+                    <div class="btn btn--border btn--primary btn--animated" style="margin-left: 10px;">
+                        <a href="https://vertex-arena.github.io" onclick="event.preventDefault(); window.location.href='../index.html';">
+                            <strong>Página principal</strong>
+                        </a>
+                    </div>
+                    <div class="btn btn--border btn--primary btn--animated" style="margin-left: 10px;">
+                        <a href="https://dsc.gg/vertexar" onclick="event.preventDefault(); window.location.href='https://dsc.gg/vertexar';">
+                            <strong>Discord</strong>
+                        </a>
+                    </div>
+                    <div class="btn btn--border btn--primary btn--animated" style="margin-left: 10px;">
+                        <a href="https://github.com/inactivood" onclick="event.preventDefault(); window.location.href='https://github.com/inactivood';">
+                            <strong>GitHub</strong>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <header class="max-4xl mx-auto mt-20 text-center">
+            <div class="max-w-xl mx-auto">
+                <h1 class="text-4xl">
+                    Los <span style="color: orange; margin-left: 5px;"><strong>Tutoriales y Assets</strong></span> más complejos, explicados en <span id="dynamic-text"></span>.
+                </h1>         
+
+                <h2 class="inline-flex items-center mt-2">
+                    Realizado por <a href="https://github.com/inactivood" style="color: orange; margin-left: 5px; text-decoration: none;">inactivo</a> <img src="./images/inactivo.png" alt="cabeza de hasbulla" width="85" style="margin-left: -5px;" />
+                </h2>                           
+
+                <p class="text-sm mt-14">
+                    Encontrá tu <span style="color:rgb(255, 174, 0); margin-left: auto;">asset u tutorial ideal</span>
+                    en este apartado de nuestra Web.
+                </p>
+                <p class="text-sm mt-2">
+                    <span class="text-black-400" style="margin-left: auto;">Si tenes problemas con el filtro de búsqueda clickea el logo arriba a la izquierda para restablecerlo</span>
+                </p>
+            </div>
+
+            <div class="relative flex lg:inline-flex items-center rounded-xl">
+                <!-- Category Selector -->
+                <select id="category-select" class="appearance-none bg-transparent py-2 px-5 text-sm font-semibold">
+                    <option value="category" disabled selected>Categorías <i class="fas fa-arrow-down"></i></option>                
+                    <option value="tutorial">Tutoriales</option>
+                    <option value="asset">Assets</option>
+                </select>
+
+            </div>
+            
+            <div class="relative flex lg:inline-flex items-center rounded-xl">
+                <!-- Game Selector -->
+                <select id="game-select" class="appearance-none bg-transparent py-2 px-5 text-sm font-semibold">
+                    <option value="game" disabled selected>Juego</option>
+                    <option value="csso">CS:SO</option>
+                    <option value="iosoccer">IOSoccer</option>
+                </select >
+            </div>
+
+            <!-- Search -->
+            <div class="relative flex lg:inline-flex items-center rounded-xl px-3 py-2">
+                <form method="GET" action="#">
+                    <input type="text" name="search" placeholder="Escribí aca..."
+                           class="bg-transparent placeholder-black font-semibold text-sm">
+                </form>
+            </div>
+        </header>
+
+        <main class="mt-10">
+            <div class="max-w-4xl mx-auto p-6 mt-6 flex space-x-4" id="cards-container">
+                <!-- Card 1 -->
+                <div class="card flex-1" data-category="tutorial" data-game="iosoccer" onclick="window.location.href='tutorial1.html'">
+                    <img class="w-full h-48 object-cover" src="./images/hammer++.png" alt="Tutorial 1">
+                    <div class="p-6" onclick="event.stopPropagation();">
+                        <h2 style="color: var(--orange)" class="text-xl font-bold mb-2">Descarga de Hammer++</h2>
+                        <p class="text-gray-700 mb-4">Este tutorial te enseñará a como descargar <strong>Hammer++</strong> correctamente. <i>(IOSoccer)</i></p>
+                    </div>
+                </div>
+        
+                <!-- Card 2 -->
+                <div class="card flex-1" data-category="asset" data-game="iosoccer" onclick="window.location.href='tutorial2.html'">
+                    <img class="w-full h-48 object-cover" src="./images/fps.png" alt="Tutorial 2">
+                    <div class="p-6" onclick="event.stopPropagation();">
+                        <h2 style="color: var(--orange)" class="text-xl font-bold mb-2">Boosteo de FPS para IOSoccer</h2>
+                        <p class="text-gray-700 mb-4">Este recompilado de assets ayudarán a optimizar <strong>completamente</strong> tu IOSoccer</p>
+                    </div>
+                </div>
+        
+                <!-- Card 3 -->
+                <div class="card flex-1" data-category="tutorial" data-game="csso" onclick="window.location.href='./other/underbuilding/underwork.html'">
+                    <img class="w-full h-48 object-cover" src="./images/csso.png" alt="Tutorial 3">
+                    <div class="p-6" onclick="event.stopPropagation();">
+                        <h2 style="color: var(--orange)" class="text-xl font-bold mb-2">Descarga de CS:SO</h2>
+                        <p class="text-gray-700 mb-4">Este tutorial te ayudará a como instalar correctamente <strong>Counter-Strike: Source Offensive</strong> correctamente para <strong>Steam/Non-Steam</strong></p>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- espacio -->
+            <div class="mt-10"></div>
+        
+            <div class="max-w-4xl mx-auto p-6 mt-6 flex space-x-4" id="cards-container-2">
+                <!-- Card 4 -->
+                <div class="card flex-1" data-category="asset" data-game="iosoccer" onclick="window.location.href='tutorial4.html'">
+                    <img class="w-full h-48 object-cover" src="./images/mohawk.png" alt="Asset 1">
+                    <div class="p-6" onclick="event.stopPropagation();">
+                        <h2 style="color: orange;" class="text-xl font-bold mb-2">Mohawk de <span class="rainbow-text">COLORES</span></h2>
+                        <p class="text-gray-700 mb-4">¿Estás aburrido de los mismos colores que tienen los mohawk? ¡Intenta cambiarlos con este <strong>addon!</strong></p>
+                    </div>
+                </div>
+        
+                <!-- Card 5 -->
+                <div class="card flex-1" data-category="tutorial" data-game="csso" onclick="window.location.href='./other/underbuilding/underwork.html'">
+                    <img class="w-full h-48 object-cover" src="./images/cfg-csso.png" alt="Tutorial 5">
+                    <div class="p-6" onclick="event.stopPropagation();">
+                        <h2 style="color: var(--orange)" class="text-xl font-bold mb-2">Guía de Configuración para CS:SO</h2>
+                        <p class="text-gray-700 mb-4">Aprende a configurar CS:SO para un mejor rendimiento.</p>
+                    </div>
+                </div>
+        
+                <!-- Card 6 -->
+                <div class="card flex-1" data-category="asset" data-game="iosoccer" onclick="window.location.href='tutorial6.html'">
+                    <img class="w-full h-48 object-cover" src="./images/menu.gif" alt="Asset 2">
+                    <div class="p-6" onclick="event.stopPropagation();">
+                        <h2 style="color: var(--orange)" class="text-xl font-bold mb-2">Menus <span class="rainbow-text">Personalizados</span></h2>
+                        <p class="text-gray-700 mb-4">El mismo menu de <strong>IOS</strong> de siempre perdio credibilidad... Entrá para ver los <strong>mejores menus</strong> personalizados para tu <strong>IOSoccer</strong></p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+                <div id="no-assets-message" class="hidden text-center">
+                    <h2 class="text-xl font-bold text-red-500 mt-4">¡No hay ningún asset para este juego aún!</h2>
+                </div>
+
+            </div>
+
+        </main>
+        
+        <script>
+            function toggleExpand(cardId) {
+                const cardContent = document.getElementById(cardId);
+                if (cardContent.classList.contains('hidden')) {
+                    cardContent.classList.remove('hidden');
+                } else {
+                    cardContent.classList.add('hidden');
+                }
+            }
+        </script>
+
+<script>
+    window.onload = function() {
+        document.body.classList.add('fade-in-page');
+    };
+</script>
+
+
+        <footer>
+        </footer>
+    </section>
+</body>
+
+<script>
+    const texts = ["blog", "minutos", "videos", "pdfs"];
+    let index = 0;
+    const dynamicText = document.getElementById("dynamic-text");
+
+    function typeText(text, callback) {
+        let i = 0;
+        dynamicText.innerHTML = ""; // limpia el contenido anterior (para no repetir lo mismo)
+        const interval = setInterval(() => {
+            if (i < text.length) {
+                dynamicText.innerHTML += text.charAt(i); //permite etiquetas HTML mediante innerhtml!!
+                i++;
+            } else {
+                clearInterval(interval);
+                setTimeout(callback, 1000); // segundos de cambio
+            }
+        }, 100); // velocidad
+    }
+
+    function startAnimation() {
+        typeText(texts[index], () => {
+            index = (index + 1) % texts.length; 
+            startAnimation(); 
+        });
+    }
+
+    window.onload = function() {
+        startAnimation();
+    };
+</script>
+
+
+
+</html>
