@@ -1,0 +1,318 @@
+body {
+    background-color: #ffffff;
+}
+
+@keyframes pageFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-page {
+    animation: pageFadeIn 1s ease-in-out forwards;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700|Space+Mono:400,700&display=swap");
+
+:root{
+--orange:#B78831;
+}
+
+::-webkit-scrollbar {
+width: 12px;
+}
+
+::-webkit-scrollbar-track.dark-mode {
+background: #0A0A0A;
+}
+
+::-webkit-scrollbar-thumb {
+background-color: var(--orange);
+border-radius: 10px;
+border: 3px solid #0A0A0A;
+}
+
+::-webkit-scrollbar-thumb:hover {
+background-color: #B78831;
+}
+
+::-moz-scrollbar {
+width: 12px;
+}
+
+::-moz-scrollbar-track.dark-mode {
+background: #0A0A0A;
+}
+
+::-moz-scrollbar-thumb {
+background-color: var(--orange);
+border-radius: 10px;
+}
+
+::-moz-scrollbar-thumb:hover {
+background-color: #B78831;
+}
+
+::-ms-scrollbar {
+width: 12px;
+}
+
+::-ms-scrollbar-track.dark-mode {
+background: #0A0A0A;
+}
+
+::-ms-scrollbar-thumb {
+background-color: var(--orange);
+border-radius: 10px;
+border: 3px solid #0A0A0A;
+}
+
+::-ms-scrollbar-thumb:hover {
+background-color: #B78831;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.dark-mode a {
+    color: #bb86fc;
+}
+
+body.dark-mode .bg-yellow-500 {
+    background-color: #bb86fc;
+}
+
+body.dark-mode .text-black {
+    color: #ffffff;
+}
+
+body.dark-mode .text-gray-700 {
+    color: #e0e0e0;
+}
+
+body.dark-mode .placeholder-black::placeholder {
+    color: #e0e0e0;
+}
+
+#toggle-dark-mode {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+#toggle-dark-mode .fas {
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+body.dark-mode #toggle-dark-mode {
+    background-color: #333;
+}
+
+body.dark-mode #toggle-dark-mode .fas {
+    color: #ffeb3b;
+}
+
+/* Estilos para los selectores y el campo de búsqueda */
+select, input[type="text"] {
+    background-color: var(--orange);
+    color: #000000; /* Texto negro */
+    border: none;
+    border-radius: 0.375rem; /* Rounded corners */
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+    font-weight: 600;
+}
+
+body.dark-mode select, body.dark-mode input[type="text"] {
+    background-color: #333;
+    color: #ffffff;
+}
+
+select:focus, input[type="text"]:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px var(--orange); /* Focus ring */
+}
+
+body.dark-mode select:focus, body.dark-mode input[type="text"]:focus {
+    box-shadow: 0 0 0 3px var(--orange); /* Focus ring for dark mode */
+}
+
+#toggle-dark-mode {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+    overflow: hidden;
+}
+
+#toggle-dark-mode .fas {
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+body.dark-mode #toggle-dark-mode {
+    background-color: #333;
+}
+
+body.dark-mode #toggle-dark-mode .fas {
+    color: var(--orange);
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.dark-mode a {
+    color: var(--orange);
+}
+
+body.dark-mode .bg-yellow-500 {
+    background-color: var(--orange);
+    color: #ffffff;
+}
+
+body.dark-mode .text-black {
+    color: #ffffff;
+}
+
+body.dark-mode .text-gray-700 {
+    color: #e0e0e0;
+}
+
+span.dark-mode .text-gray-700 {
+    color: #e0e0e0;
+}
+
+.card {
+    border: 2px solid transparent; /* vontorno (transparente) */
+    border-radius: 8px; /* redondeo de las esquinas */
+    transition: transform 0.3s ease, border-color 0.3s ease; /* transicipn correspondiente */
+    width: 1024px; /* Cambia la anchura a 1024 píxeles */
+    height: 500px; /* Cambia la altura a 500 píxeles */
+    overflow: hidden; /* Esto asegura que el contenido que exceda la altura se oculte */
+}
+
+.card:hover {
+    transform: translateY(-5px); 
+    border-color: rgba(172, 118, 9, 0.659);
+    cursor: pointer; 
+}
+
+header svg {
+    right: 0px;
+}
+
+.text-center {
+    text-align: center; 
+}
+
+.font-bold {
+    font-weight: bold; 
+}
+
+.text-xl {
+    font-size: 1.5rem; 
+}
+
+.mt-4 {
+    margin-top: 1rem; 
+}
+
+.text-red-500 {
+    color: #000000; /* color, cambiar si es necesario. */
+}
+
+.wrapper {
+    position: relative;
+    top: -5px;
+    left: -30px;
+    transform: translate(-50%, -50%);
+  }
+  
+  .btn {
+    position: relative;
+    display: inline-block;
+    letter-spacing: 1.2px;
+    padding: 12px 32px;
+    text-align: center;
+    text-transform: uppercase;
+    overflow: hidden;
+    z-index: 1;
+    cursor: pointer;
+  }
+  .btn:focus {
+    outline: none;
+  }
+  
+  .btn--primary {
+    color: orange;
+  }
+  
+  .btn--border {
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 10px;
+    box-sizing: border-box;
+  }
+  
+  .btn--animated {
+    transition-property: color;
+    transition-duration: 0.5s;
+  }
+  .btn--animated.btn--border.btn--primary {
+    border: 1px solid orange;
+  }
+  .btn--animated:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: orange;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    transition-property: transform;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+    z-index: -1;
+  }
+  .btn--animated:hover {
+    color: white;
+  }
+  .btn--animated:hover:before {
+    transform: scaleX(1);
+    transition-timing-function: cubic-bezier(0.45, 1.64, 0.47, 0.66);
+  }
+
+
