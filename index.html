@@ -23,6 +23,23 @@
         <meta property="og:type" content="website">
     </head>
     <body>
+        <style>
+            @keyframes rainbow {
+                0% { color: red; }
+                14% { color: orange; }
+                28% { color: yellow; }
+                42% { color: green; }
+                57% { color: blue; }
+                71% { color: indigo; }
+                85% { color: violet; }
+                100% { color: red; }
+            }
+            .rainbow-text {
+                animation: rainbow 3s infinite;
+            }
+        </style>
+
+
         <div id="circle-animation">
             <div class="circle white-circle"></div>
             <div class="circle orange-circle"></div>
@@ -57,6 +74,10 @@
 							<div class="header-right text-right">
                                 <i class="discord-icono fa-brands fa-discord"></i>
                                 <a class="vertex-discord" href="servidores.html" target="_blank">Servidores</a>
+                            </div>
+                            <div class="header-right text-right">
+                                <i class="discord-icono fa-brands fa-discord"></i>
+                                <a class="vertex-discord" href="https://cafecito.app/vertexarena" target="_blank"><span style="rainbow-text">¡Apoyanos con un Cafecito!</span></a>
                             </div>
                         </div>
                     </div>
