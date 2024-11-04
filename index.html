@@ -24,6 +24,7 @@
     </head>
     <body>
         <style>
+            /* rgb (no tocar)*/
             @keyframes rainbow {
                 0% { color: red; }
                 14% { color: orange; }
@@ -37,6 +38,13 @@
             .rainbow-text {
                 animation: rainbow 3s infinite;
             }
+
+            /* alert containers*/
+           
+    .alert-container .alert {
+        margin-bottom: 20px; /* Ajusta el valor según el espacio que desees */
+    }
+
         </style>
 
 
@@ -182,13 +190,13 @@
                     </div>
                 </section>
                 <!-- about us end-->
-                <!-- vip start  -->
+                <!-- beneficios vip (start)-->
                 <section id="vip-benefits" class="vip-benefits">
                     <div class="container">
                         <div class="row">
                             <div class="col-xl-12 text-center">
                                 <div class="heading">
-                                    <h1 class="text-white wow fadeInUp" data-wow-delay=".2s">Beneficios <strong>VIP</strong></h1>
+                                    <h1 class="text-white wow fadeInUp" data-wow-delay=".2s">Beneficios <img src="assets/img/vip-1.png" alt="Beneficio VIP" style="width: 126px; height: 126px; vertical-align: middle;"></h1>
                                 </div>
                             </div>
                             <div class="col-xl-12">
@@ -203,7 +211,7 @@
                                                         </div>
                                                         <h4 class="card-title" style="color: var(--orange)">Slot Reservado</h4>
                                                     </div>
-                                                    <p class="card-text">¡Podes entrar al Servidor por más que este lleno!</p>
+                                                    <p class="card-text">¿Te apetece jugar pero tu servidor favorito está <strong>lleno</strong>? ¡Con tu membresía <img src="assets/Img/vip-1.png" alt="Logo VIP" style="width: 34; height: 34px;"> puedes acceder incluso cuando esté <strong>repleto</strong> de jugadores!</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -214,9 +222,18 @@
                                                         <div class="icon-container">
                                                             <i class="fas fa-vote-yea"></i>
                                                         </div>
-                                                        <h4 class="card-title" style="color: var(--orange)">Menu de Votaciones</h4>
+                                                        <h4 class="card-title" style="color: var(--orange)">Menú de Votaciones</h4>
                                                     </div>
-                                                    <p class="card-text">¡Tenés un menu totalmente <strong>EXCLUSIVO</strong> donde podés iniciar votaciones con el público!</p>
+                                                    <div class="card-text">
+                                                        <p>Tienes la capacidad de iniciar votaciones totalmente <strong>públicas</strong> con todo el público sobre:</p>
+                                                        <ul>
+                                                            <li style="color: #d48207;"> <strong>- ¡Expulsar a un jugador!</strong></li>
+                                                            <li style="color: #d48207;"> <strong>- Cambiar el diseño del balón</strong></li>
+                                                            <li style="color: #d48207;"> <strong>- Desactivar repeticiones</strong></li>
+                                                            <li style="color: #d48207;"> <strong>- Activar el chat de voz para todos</strong></li>
+                                                            <li style="color: #d48207;"> <strong>- Silenciar a un jugador <em>(VoiceChat)</em></strong></li>
+                                                        </ul>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -227,9 +244,15 @@
                                                         <div class="icon-container">
                                                             <i class="fas fa-arrows-alt"></i>
                                                         </div>
-                                                        <h4 class="card-title" style="color: var(--orange)">Menu de Escala</h4>
+                                                        <h4 class="card-title" style="color: var(--orange)">Menú de Escala</h4>
                                                     </div>
-                                                    <p class="card-text">Podes variar la escala de tu jugador entre <strong>pequeño</strong> o <strong>grande</strong></p>
+                                                    <div class="card-text">
+                                                        <p>Puedes modificar la escala de tu personaje con un menú fácil de usar que ofrece las opciones de:</p>
+                                                        <ul>
+                                                            <li style="color: #d48207;"><strong>- Pequeño</strong></li>
+                                                            <li style="color: #d48207;"><strong>- Grande</strong></li>
+                                                        </ul>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -240,9 +263,9 @@
                                                         <div class="icon-container">
                                                             <i class="fas fa-palette"></i>
                                                         </div>
-                                                        <h4 class="card-title" style="color: var(--orange)">RGB</h4>
+                                                        <h4 class="card-title" style="color: var(--orange)">Menú de RGB</h4>
                                                     </div>
-                                                    <p class="card-text">Así como lo lees, ¡podés poner tu personaje en <p style="background: linear-gradient(80deg, rgb(255, 68, 0), rgba(53, 255, 2), rgb(16, 47, 247), rgb(55, 0, 255), blue, rgb(0, 34, 255), violet);-webkit-background-clip: text;color: transparent;background-clip: text;">R G B!</p></p>
+                                                    <p class="card-text">Tienes la opción de cambiar el color de tu personaje mediante un menú sencillo que permite alternar el color <strong><span class="rainbow-text">RGB</span></strong>.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -251,28 +274,24 @@
                                                 <div class="card-body">
                                                     <div class="icon-title-container">
                                                         <div class="icon-container">
-                                                            <i class="fas fa-crown"></i>
+                                                            <i class="fas fa-info-circle"></i>
                                                         </div>
-                                                        <h4 class="card-title" style="color: var(--orange)">Menu VIP</h4>
+                                                        <h4 class="card-title" style="color: var(--orange)">Menú Informativo VIP</h4>
                                                     </div>
-<p class="card-text" style="color: white;">Tenes un Menu <strong style="color: white;">VIP</strong> en todos los servidores en el cual tenes información de:</p>
-
-<strong style="color: white;">Tu Juego</strong>
-<ul>
-    <li><em style="color: green;">➮ Ping</em></li>
-    <li><em style="color: green;">➮ SteamID</em></li>
-    <li><em style="color: green;">➮ Tiempo de Juego</em></li>
-</ul>
-
-<strong style="color: white;">Tu VIP</strong>
-<ul>
-    <li><em style="color: green;">➮ Beneficios</em></li>
-    <li><em style="color: green;">➮ Información</em></li>
-</ul>
-
-<p style="color: white;">¡Entre otras muchas más funciones <strong style="color: white;">EXCLUSIVAS</strong> solo para VIPs!</p>
-
-
+                                                    <p class="card-text">En un solo menú, puedes revisar los beneficios que tienes y el tiempo restante de tu membresía. ¡Disfrútalo antes de que se acabe!</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="slide">
+                                            <div class="card glassy-card vip-card">
+                                                <div class="card-body">
+                                                    <div class="icon-title-container">
+                                                        <div class="icon-container">
+                                                            <i class="fas fa-star"></i>
+                                                        </div>
+                                                        <h4 class="card-title" style="color: var(--orange)">Menú Exclusivo</h4>
+                                                    </div>
+                                                    <p class=" card-text">Además de contar con varios menús adicionales, tienes acceso a un menú donde puedes navegar fácilmente a todos los comandos disponibles hasta el momento.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -281,7 +300,25 @@
                             </div>
                         </div>
                     </div>
+                    <div class="alert-container"> 
+                        <div class="alert alert-danger text-center" role="alert" style="max-width: 600px; margin: 0 auto;"> 
+                            <i class="fas fa-exclamation-triangle" style="color: red;"></i> 
+                            <span>Recuerda: Cualquier uso indebido de los comandos exclusivos de tu membresía VIP puede resultar en la suspensión indefinida del producto, sin posibilidad de apelación. Para más información, visita <a href="http://www.vertex.com.ar/shop" target="_blank">www.vertex.com.ar/shop</a>.</span> 
+                        </div> 
+                        
+                        <br> <!-- Espacio entre las alertas -->
+                        
+                        <div class="alert alert-success text-center" role="alert" style="max-width: 600px; margin: 0 auto;"> 
+                            <i class="fas fa-check-circle" style="color: green;"></i> 
+                            <span>Entregas Inmediatas: Si no se realiza de inmediato, tendrás que esperar un máximo de 48 horas garantizadas.</span> 
+                        </div> 
+                    </div>
                 </section>
+<!--finalizacion tarjetas beneficios VIP-->
+<!-- tipos de pago-->
+ <br>
+ <br>
+ <br>
                 <section id="payment-methods" class="payment-methods">
                     <div class="container" style="background-size: cover; background-repeat: no-repeat;">
                         <div class="row align-items-center" style="background-size: cover; background-repeat: no-repeat;">
