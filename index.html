@@ -15,6 +15,9 @@
         <link rel="stylesheet" href="assets/css/lineicons.css">
         <link rel="stylesheet" href="assets/css/animate.css">
         <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- Open Graph Meta Tags -->
         <meta property="og:title" content="Vertex Arena - Servidores de CS:SO e IOSoccer">
         <meta property="og:description" content="Vertex Arena ofrece los mejores servidores de CS:SO e IOSoccer. Únete a nuestra comunidad y disfruta de una experiencia de juego inigualable.">
@@ -23,31 +26,6 @@
         <meta property="og:type" content="website">
     </head>
     <body>
-        <style>
-            /* rgb (no tocar)*/
-            @keyframes rainbow {
-                0% { color: red; }
-                14% { color: orange; }
-                28% { color: yellow; }
-                42% { color: green; }
-                57% { color: blue; }
-                71% { color: indigo; }
-                85% { color: violet; }
-                100% { color: red; }
-            }
-            .rainbow-text {
-                animation: rainbow 3s infinite;
-            }
-
-            /* alert containers*/
-           
-    .alert-container .alert {
-        margin-bottom: 20px; /* Ajusta el valor según el espacio que desees */
-    }
-
-        </style>
-
-
         <div id="circle-animation">
             <div class="circle white-circle"></div>
             <div class="circle orange-circle"></div>
@@ -64,58 +42,51 @@
                 <div class="container">
                     <div class="row align-items-center">
                         <div class="col-md-4">
-                            <div class="header-logo-container">
-                                <a href="index.html" class="logo">
-                                    <img src="assets/img/logo.gif" alt="Vertex Arena Logo">
+                        </div>
+                        <nav>
+                            <div class="logo">
+                                <img src="./assets/img/icon.png" alt="VerteX Logo ANIMADO" style="height: 80px; width: 80px;">
+                            </div>
+                            <div style="color: red; position: absolute; top: 0; left: 50%; transform: translateX(-50%);">
+                                <a href="https://www.progamers.com.ar" style="color: rgba(255, 0, 0, 0.721); font-weight: bold;">
+                                    powered by <img src="assets/img/progamers.png" alt="ProGamers" style="width: 60px; height: 60px;">
                                 </a>
                             </div>
-                        </div>
-                        <div class="col-md-8">
-                            <div class="header-right text-right">
-                                <i class="discord-icono fa-brands fa-discord"></i>
-                                <a class="vertex-discord" href="https://dsc.gg/vertexar" target="_blank">Discord</a>
-                            </div>
-                            <div class="header-right text-right">
-                                <i class="discord-icono fa-brands fa-discord"></i>
-                                <a class="vertex-discord" href="./blog/blog.html" target="_blank">Blog (<em>Tutoriales e Assets</em>)</a>
-                            </div>
-							<div class="header-right text-right">
-                                <i class="discord-icono fa-brands fa-discord"></i>
-                                <a class="vertex-discord" href="servidores.html" target="_blank">Servidores</a>
-                            </div>
-                            <div class="header-right text-right">
-                                <i class="discord-icono fa-brands fa-discord"></i>
-                                <a class="vertex-discord" href="https://cafecito.app/vertexarena" target="_blank"><span class="rainbow-text">¡Apoyanos con un Cafecito!</span></a>
-                            </div>
-                        </div>
+                            <input type="checkbox" id="click">
+                            <label for="click" class="menu-btn">
+                                <i class="fas fa-bars"></i>
+                            </label>
+                            <ul>
+                                <li><a class="active" href="#">Página inicial</a></li>
+                                <li><a href="shop/shop.html">Compra VIP</a></li>
+                                <li><a href="blog/blog.html">BLOG & ASSETS</a></li>
+                                <li><a href="https://discadia.com/server/vertexarena">Discadia</a></li>
+                                <li><a href="https://cafecito.app/vertexarena"><span class="rainbow-text">Cafecito</span></a></li>
+                            </ul>
+                        </nav>
                     </div>
                 </div>
             </div>
             <!-- header end  -->
+
             <!-- ========================= main-wrapper start ========================= -->
             <div class="main-wrapper demo-06">
                 <!-- hero-area start  -->
                 <div class="hero-area">
                     <div class="container">
                         <div class="row">
-                            <div class="col-xl-12">
+                            <div class="col-xl-12 text-center">
                                 <!-- heading start  -->
                                 <div class="heading">
-                                    <h1 class="text-white wow fadeInUp" data-wow-delay=".2s">
-                                        Estamos <br> cerca<strong class="animated-dots" style="color: var(--orange)"></strong>
-                                    </h1>                          
+                                    <h2 class="text-white wow fadeInUp" data-wow-delay=".2s">
+                                        Más que una comunidad, una<br><h1><strong><span class="wavy" style="color: orange;">FAMILIA</span></strong></h1><strong class="animated-dots" style="color: var(--orange)"></strong>
+                                    </h2>								
                                 </div>
                                 <!-- heading end  -->
                             </div>
                             <div class="col-xl-7 col-lg-7">
-                                <!-- countdown start  -->
-                                <div class="wow fadeInRight" data-wow-delay=".4s" data-countdown="2024/12/01"></div>
-                                <!-- countdown end  -->
                             </div>
                             <div class="col-xl-5 col-lg-5">
-                                <!-- desc start  -->
-                                <p class="wow fadeInLeft" data-wow-delay=".4s">Más que una comunidad, <br><strong>una FAMILIA.</strong></p>
-                                <!-- desc end  -->
                             </div>
                             <div class="col-xl-12 text-center">
                                 <!-- double arrow start  -->
@@ -130,6 +101,29 @@
                     </div>
                 </div>
                 <!-- hero-area end  -->
+                 <!-- servers start-->
+<section id="about-us" class="servers">
+    <div class="container" style="padding: 0 0 0 50px">
+        <div class="row">
+            <div class="col-xl-12 text-center">
+                <!-- heading start  -->
+                <div class="heading" style="padding: 50px 0">
+                    <h1 class="text-white wow fadeInUp" data-wow-delay=".2s">¡Conectate con la <strong><u>comunidad</u></strong>!</h1>
+                </div>
+                <!-- heading end  -->
+            </div>
+            <div class="col-xl-4 col-lg-4 p-2">
+                <div class="row d-flex justify-content-between">
+
+                </div>
+            </div>
+            <div style="display: flex; justify-content: center; align-items: center;"> <!-- Aumentar margen izquierdo -->
+                <discord-widget id="1147621852160729198" height="550px" color="orange" footerText="by inactivo"></discord-widget>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- servers end-->
                 <!-- about us start-->
                 <section id="about-us" class="why-choose-us">
                     <div class="container" style="padding: 0 0 0 50px">
@@ -137,7 +131,7 @@
                             <div class="col-xl-12 text-center">
                                 <!-- heading start  -->
                                 <div class="heading" style="padding: 50px 0">
-                                    <h1 class="text-white wow fadeInUp" data-wow-delay=".2s">¿Por qué <strong>Elegirnos?</strong></h1>
+                                    <h1 class="text-white wow fadeInUp" data-wow-delay=".2s">¿Por qué <strong>NOSOTROS</strong>?</h1>
                                 </div>
                                 <!-- heading end  -->
                             </div>
@@ -149,9 +143,9 @@
                                             <div class="icon-container">
                                                 <i class="fas fa-briefcase"></i> <!-- Icono para "Experiencia" -->
                                             </div>
-                                            <h4 class="card-title">Experiencia</h4>
+                                            <h4 class="card-title"><strong>Experiencia</strong></h4>
                                         </div>
-                                        <p class="card-text">Contamos con un equipo altamente experimentado en el desarrollo de software y gestión de comunidades.</p>
+                                        <p class="card-text">Contamos con un equipo altamente <strong>experimentado</strong> en el desarrollo de software <i class="fas fa-cog" style="color: orange;"></i> y gestión de comunidades<i class="fas fa-user" style="color: orange;"></i>.</p>
                                     </div>
                                 </div>
                                 <!-- card end  -->
@@ -164,9 +158,9 @@
                                             <div class="icon-container">
                                                 <i class="fas fa-lightbulb"></i> <!-- Icono para "Innovación" -->
                                             </div>
-                                            <h4 class="card-title">Innovación</h4>
+                                            <h4 class="card-title"><span class="rainbow-text"><strong>Innovación</strong></span></h4>
                                         </div>
-                                        <p class="card-text">Siempre estamos a la vanguardia de las últimas tecnologías y tendencias para ofrecer lo mejor en nuestros servidores.</p>
+                                        <p class="card-text">Contamos con una <strong>alta gama</strong> de servidores e ideas <strong>innovadoras</strong> que se trabajan arduamente <strong>dia a día</strong> con tal de brindar lo mejor para nuestros servidores.</p>
                                     </div>
                                 </div>
                                 <!-- card end  -->
@@ -179,7 +173,7 @@
                                             <div class="icon-container">
                                                 <i class="fas fa-users"></i> <!-- Icono para "Comunidad" -->
                                             </div>
-                                            <h4 class="card-title">Comunidad</h4>
+                                            <h4 class="card-title"><strong>Comunidad</strong></h4>
                                         </div>
                                         <p class="card-text">Más que una comunidad, somos una <strong>familia</strong> que se apoya mutuamente en cada paso del camino.</p>
                                     </div>
@@ -190,175 +184,8 @@
                     </div>
                 </section>
                 <!-- about us end-->
-                <!-- beneficios vip (start)-->
-                <section id="vip-benefits" class="vip-benefits">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-xl-12 text-center">
-                                <div class="heading">
-                                    <h1 class="text-white wow fadeInUp" data-wow-delay=".2s">Beneficios <img src="assets/img/vip-1.png" alt="Beneficio VIP" style="width: 126px; height: 126px; vertical-align: middle;"></h1>
-                                </div>
-                            </div>
-                            <div class="col-xl-12">
-                                <div class="slider-container">
-                                    <div class="slider">
-                                        <div class="slide">
-                                            <div class="card glassy-card vip-card">
-                                                <div class="card-body">
-                                                    <div class="icon-title-container">
-                                                        <div class="icon-container">
-                                                            <i class="fas fa-user-shield"></i>
-                                                        </div>
-                                                        <h4 class="card-title" style="color: var(--orange)">Slot Reservado</h4>
-                                                    </div>
-                                                    <p class="card-text">¿Te apetece jugar pero tu servidor favorito está <strong>lleno</strong>? ¡Con tu membresía <img src="assets/Img/vip-1.png" alt="Logo VIP" style="width: 34; height: 34px;"> puedes acceder incluso cuando esté <strong>repleto</strong> de jugadores!</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="slide">
-                                            <div class="card glassy-card vip-card">
-                                                <div class="card-body">
-                                                    <div class="icon-title-container">
-                                                        <div class="icon-container">
-                                                            <i class="fas fa-vote-yea"></i>
-                                                        </div>
-                                                        <h4 class="card-title" style="color: var(--orange)">Menú de Votaciones</h4>
-                                                    </div>
-                                                    <div class="card-text">
-                                                        <p>Tienes la capacidad de iniciar votaciones totalmente <strong>públicas</strong> con todo el público sobre:</p>
-                                                        <ul>
-                                                            <li style="color: #d48207;"> <strong>- ¡Expulsar a un jugador!</strong></li>
-                                                            <li style="color: #d48207;"> <strong>- Cambiar el diseño del balón</strong></li>
-                                                            <li style="color: #d48207;"> <strong>- Desactivar repeticiones</strong></li>
-                                                            <li style="color: #d48207;"> <strong>- Activar el chat de voz para todos</strong></li>
-                                                            <li style="color: #d48207;"> <strong>- Silenciar a un jugador <em>(VoiceChat)</em></strong></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="slide">
-                                            <div class="card glassy-card vip-card">
-                                                <div class="card-body">
-                                                    <div class="icon-title-container">
-                                                        <div class="icon-container">
-                                                            <i class="fas fa-arrows-alt"></i>
-                                                        </div>
-                                                        <h4 class="card-title" style="color: var(--orange)">Menú de Escala</h4>
-                                                    </div>
-                                                    <div class="card-text">
-                                                        <p>Puedes modificar la escala de tu personaje con un menú fácil de usar que ofrece las opciones de:</p>
-                                                        <ul>
-                                                            <li style="color: #d48207;"><strong>- Pequeño</strong></li>
-                                                            <li style="color: #d48207;"><strong>- Grande</strong></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="slide">
-                                            <div class="card glassy-card vip-card">
-                                                <div class="card-body">
-                                                    <div class="icon-title-container">
-                                                        <div class="icon-container">
-                                                            <i class="fas fa-palette"></i>
-                                                        </div>
-                                                        <h4 class="card-title" style="color: var(--orange)">Menú de RGB</h4>
-                                                    </div>
-                                                    <p class="card-text">Tienes la opción de cambiar el color de tu personaje mediante un menú sencillo que permite alternar el color <strong><span class="rainbow-text">RGB</span></strong>.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="slide">
-                                            <div class="card glassy-card vip-card">
-                                                <div class="card-body">
-                                                    <div class="icon-title-container">
-                                                        <div class="icon-container">
-                                                            <i class="fas fa-info-circle"></i>
-                                                        </div>
-                                                        <h4 class="card-title" style="color: var(--orange)">Menú Informativo VIP</h4>
-                                                    </div>
-                                                    <p class="card-text">En un solo menú, puedes revisar los beneficios que tienes y el tiempo restante de tu membresía. ¡Disfrútalo antes de que se acabe!</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="slide">
-                                            <div class="card glassy-card vip-card">
-                                                <div class="card-body">
-                                                    <div class="icon-title-container">
-                                                        <div class="icon-container">
-                                                            <i class="fas fa-star"></i>
-                                                        </div>
-                                                        <h4 class="card-title" style="color: var(--orange)">Menú Exclusivo</h4>
-                                                    </div>
-                                                    <p class=" card-text">Además de contar con varios menús adicionales, tienes acceso a un menú donde puedes navegar fácilmente a todos los comandos disponibles hasta el momento.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="alert-container"> 
-                        <div class="alert alert-danger text-center" role="alert" style="max-width: 600px; margin: 0 auto;"> 
-                            <i class="fas fa-exclamation-triangle" style="color: red;"></i> 
-                            <span>Recuerda: Cualquier uso indebido de los comandos exclusivos de tu membresía VIP puede resultar en la suspensión indefinida del producto, sin posibilidad de apelación. Para más información, visita <a href="http://www.vertex.com.ar/shop" target="_blank">www.vertex.com.ar/shop</a>.</span> 
-                        </div> 
-                        
-                        <br> <!-- Espacio entre las alertas -->
-                        
-                        <div class="alert alert-success text-center" role="alert" style="max-width: 600px; margin: 0 auto;"> 
-                            <i class="fas fa-check-circle" style="color: green;"></i> 
-                            <span>Entregas Inmediatas: Si no se realiza de inmediato, tendrás que esperar un máximo de 48 horas garantizadas.</span> 
-                        </div> 
-                    </div>
-                </section>
-<!--finalizacion tarjetas beneficios VIP-->
-<!-- tipos de pago-->
- <br>
- <br>
- <br>
-                <section id="payment-methods" class="payment-methods">
-                    <div class="container" style="background-size: cover; background-repeat: no-repeat;">
-                        <div class="row align-items-center" style="background-size: cover; background-repeat: no-repeat;">
-<div class="col-lg-6" style="background-size: cover; background-repeat: no-repeat;">
-    <h1 class="wow fadeInUp animated" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp; color: var(--orange)">Métodos de <strong>pago</strong></h1>
-    <small style="display: block; color: rgba(128, 128, 128, 0.7); font-size: 0.75rem; margin-top: 5px;">.ICOs by inactivo</small>
-</div>
-                            <div class="col-lg-6" style="background-size: cover; background-repeat: no-repeat;">
-                                <div class="row g-4" style="background-size: cover; background-repeat: no-repeat;">
-                                    <div class="col-sm-2 col-4" style="background-size: cover; background-repeat: no-repeat;">
-                                        <div class="p-2 rounded-10 bgcustom" data-bgcolor="rgba(255, 255, 255, .05)" style="background-color: rgba(255, 255, 255, 0.05); background-size: cover; background-repeat: no-repeat; height: 120%; align-self: center">
-                                            <img src="assets/img/visa.png" class="img-fluid" alt="Visa">
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-2 col-4" style="background-size: cover; background-repeat: no-repeat;">
-                                        <div class="p-2 rounded-10 bgcustom" data-bgcolor="rgba(255, 255, 255, .05)" style="background-color: rgba(255, 255, 255, 0.05); background-size: cover; background-repeat: no-repeat; height: 120%; align-self: center">
-                                            <img src="assets/img/mastercard.png" class="img-fluid" alt="Mastercard">
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-2 col-4" style="background-size: cover; background-repeat: no-repeat;">
-                                        <div class="p-2 rounded-10 bgcustom" data-bgcolor="rgba(255, 255, 255, .05)" style="background-color: rgba(255, 255, 255, 0.05); background-size: cover; background-repeat: no-repeat; height: 120%; align-self: center">
-                                            <img src="assets/img/paypal.png" class="img-fluid" alt="PayPal">
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-2 col-4" style="background-size: cover; background-repeat: no-repeat;">
-                                        <div class="p-2 rounded-10 bgcustom" data-bgcolor="rgba(255, 255, 255, .05)" style="background-color: rgba(255, 255, 255, 0.05); background-size: cover; background-repeat: no-repeat; height: 120%; align-self: center">
-                                            <img src="assets/img/mercado-pago.png" class="img-fluid" alt="Mercado Pago">
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-2 col-4" style="background-size: cover; background-repeat: no-repeat;">
-                                        <div class="p-2 rounded-10 bgcustom" data-bgcolor="rgba(255, 255, 255, .05)" style="background-color: rgba(255, 255, 255, 0.05); background-size: cover; background-repeat: no-repeat; height: 120%; align-self: center">
-                                            <img src="assets/img/uala.png" class="img-fluid" alt="Ualá">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <!-- vip end  -->
+
+
                 <!-- team-area start  -->
                 <section id="team-area" class="team-area py-5">
                     <div class="container">
@@ -366,7 +193,7 @@
                             <div class="col-xl-9 py-5">
                                 <!-- section-title start  -->
                                 <div id="team-area" class="section-title text-align-items-centerr">
-                                    <h1 class="wow fadeInUp" data-wow-delay=".4s">Conoce a nuestro equipo dedicado al <strong style="color: var(--orange)">desarrollo.</strong></h1>
+                                    <h1 class="wow fadeInUp" data-wow-delay=".4s">Conoce a nuestro equipo dedicado al <strong style="color: var(--orange)"><u>desarrollo</u></strong>.</h1>
 									<h2 class="wow fadeInUp" data-wow-delay=".2s">Desarrolladores</h2>
                                 </div>
                                 <!-- section-title end  -->
@@ -377,7 +204,7 @@
                             <!-- team-item start  -->
                             <div class="team-item wow fadeInUp" data-wow-delay=".2s">
                                 <div class="team-img">
-                                    <img src="assets/img/inactivo.jfif" alt="Foto de perfil de Inactivo">
+                                    <img src="assets/img/inactivo.png" alt="Foto de perfil de Inactivo">
                                     <ul class="social-links">
                                         <li><a href="https://github.com/inactivood" target="_blank"><i class="lni lni-github-original"></i></a></li>    
                                         <li><a href="https://www.linkedin.com/in/britez-a69427327/" target="_blank"><i class="lni lni-linkedin-original"></i></a></li>      
@@ -386,9 +213,10 @@
                                 </div>
                                 <div class="team-info">
                                     <h4>inactivo</h4>
-                                    <p>Ingeniero en software de <span style="color: #d49b00;">videojuegos</span></p>
-                                    <p>Codificador experimentado de <span style="color: #d49b00;">Source Engine</span> & <span style="color: #f54842;">Source Mod</span></p>
-                                    <p>Estudiante <span style="color: #d49b00;">amateur</span> en analista de sistemas</p>
+                                    <p>❱ Ingeniero en software de <span style="color: #d49b00;"><u>videojuegos</u></span></p>
+                                    <p>❱ Codificador experimentado de <span style="color: #d49b00;">Source Engine</span> & <span style="color: #f54842;">Source Mod</span></p>
+                                    <p>❱ Estudiante <i>amateur</i> en analista de sistemas</p>
+                                    <p>❱ Aguatero 𓀟</p>
                                 </div>
                             </div>
                             <!-- team-item end  -->
@@ -404,9 +232,10 @@
                                 </div>
                                 <div class="team-info">
                                     <h4>Bussetto</h4>
-                                    <p>Desarrollador <span style="color: #FF5733;">Web</span></p>
-                                    <p>Creador de <strong><span class="rainbow-text">Contenido</span></strong></p>
-                                    <p>Aparece 1 vez cada 3 meses</p>
+                                    <p>❱ Desarrollador <span style="color: #FF5733;">Web</span></p>
+                                    <p>❱ Creador de <strong><span class="rainbow-text">Contenido</span></strong> <i>(YouTube, no <span style="color: orange;">PH</span>...)</i></p>
+                                    <p>❱ Streamer en <span style="color: rgb(108, 10, 173);"><strong>Twitch</strong></span></p>
+                                    <p>❱ Aparece 1 vez cada 3 meses</p>
                                 </div>
                             </div>
                             <!-- team-item end  -->
@@ -422,19 +251,37 @@
                             </div>
                             <!-- section-title start  -->
                             <div class="section-title text-align-items-centerr">
-                            <h1 class="wow fadeInUp" data-wow-delay=".4s">Conoce a nuestro equipo dedicado a la <strong style="color: var(--orange)">comunidad.</strong></h1>
+                            <h1 class="wow fadeInUp" data-wow-delay=".4s">Conoce a nuestro equipo dedicado a la <strong style="color: var(--green)"><u>comunidad</u></strong>.</h1>
                             <h2 class="wow fadeInUp" data-wow-delay=".2s">Moderación & Soporte</h2>
                             </div>
                             <div class="team-wrapper">
                                 <!-- team-item start  -->
                                 <div class="team-item wow fadeInUp" data-wow-delay=".2s">
                                     <div class="team-img">
-                                        <img src="assets/img/dert.jpg" alt="Foto de perfil de Dert" >
+                                        <img src="assets/img/dert.png" alt="Foto de perfil de Dert" >
                                     </div>
                                     <div class="team-info">
                                         <h4>Dert</h4>
-                                        <p>Personal de <span style="color: #00ff44;">Soporte</span></p>
-                                        <p>Multi-millonario en Vertex Arena</p>
+                                        <p>❱ Personal de <span style="color: #00ff44;">Soporte</span></p>
+                                        <p>❱ Lider de <u>moderación</u> en <span style="color: rgb(81, 81, 194);">Canito Gaming</span></p>
+                                    </div>
+                                </div>
+                                <div class="team-item wow fadeInUp" data-wow-delay=".6s">
+                                    <div class="team-img">
+                                        <img src="assets/img/img-1.jpg" alt="">
+                                    </div>
+                                    <div class="team-info">
+                                        <h4>???</h4>
+                                        <p>???</p>
+                                    </div>
+                                </div>
+                                <div class="team-item wow fadeInUp" data-wow-delay=".6s">
+                                    <div class="team-img">
+                                        <img src="assets/img/img-2.jpg" alt="">
+                                    </div>
+                                    <div class="team-info">
+                                        <h4>???</h4>
+                                        <p>???</p>
                                     </div>
                                 </div>
                                 <!-- team-item end  -->
@@ -462,8 +309,8 @@
                         <div class="col-md-7">
                             <div class="copyright wow fadeInLeft" data-wow-delay=".2s">
                                 <p>&copy; 2023 Vertex Arena. Todos los derechos reservados.</p>
-                                <p>Realizado por <strong><a href="https://github.com/inactivood" target="_blank">inactivo</a></strong> e <strong><a href="https://github.com/Bussetto" target="_blank">Bussetto</a></strong></p>
-
+                                <p>Realizado con <span style="color: red;">♥</span> por <strong><a href="https://github.com/inactivood" target="_blank">inactivo</a></strong> & <strong><a href="https://github.com/Bussetto" target="_blank">Bussetto</a></strong></p>
+                                <p><i>"Programar es crear, es soñar, es hacer realidad lo <strong>imposible</strong>."</i></p>
                         </div>
                     </div>
                 </div>
@@ -480,5 +327,25 @@
         <script src="assets/js/countdown.js"></script>
         <script src="assets/js/wow.min.js"></script>
 		<script src="assets/js/main.js"></script>
+        <script src="https://dipped.dev/static/plugins/discordwidget/index.js"></script>
+        <script src="seccion.js"></script>
+        <script>
+            // texto wavy, no tocar //
+var str = document.querySelector('.wavy').innerHTML;
+
+if (Math.abs(str.length % 2) == 1) {str += " "}
+
+var out = '';
+for (let i = 0; i < str.length/2; i++) {
+  out += '<span style="animation-delay:'+i*0.04+'s">'+str[i]+'</span>';
+}
+let n = str.length/2;
+for (let i = str.length/2; i < str.length; i++) {
+  out += '<span style="animation-delay:'+n*0.04+'s">'+str[i]+'</span>';
+  n--;
+}
+
+document.querySelector('.wavy').innerHTML = out;
+        </script>
     </body>
 </html>
