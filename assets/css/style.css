@@ -77,6 +77,45 @@
   align-items: center;
 }
 
+  @keyframes rainbow {
+    0% { color: red; }
+    14% { color: orange; }
+    28% { color: yellow; }
+    42% { color: green; }
+    57% { color: blue; }
+    71% { color: indigo; }
+    85% { color: violet; }
+    100% { color: red; }
+}
+.rainbow-text {
+    animation: rainbow 3s infinite;
+}
+
+.wavy span {
+position: relative;
+animation: opacity 2s both, hover 2s both infinite;
+}
+
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes hover {
+  from, to {
+    top: 3vh;
+  }
+  50% {
+    top: -3vh;
+  }
+}
+        
+.alert-container .alert {
+    margin-bottom: 20px; 
+}
+
+
 .header-logo-container {
   position: relative;
   display: flex;
@@ -148,7 +187,7 @@ body.loaded #circle-animation {
 }
 
 .animated-dots::after {
-  content: '...';
+  content: '';
   display: inline-block;
   animation: dots 2s infinite;
 }
@@ -1620,7 +1659,7 @@ main .footer p {
 }
 
 .why-choose-us {
-  background: url('../img/fondo-why-choose-us.png') no-repeat center center;
+  background: url('../img/iososcuro.png') no-repeat center center;
   background-size: cover;
   padding: 50px 0;
   margin-bottom: 50px;
@@ -1630,32 +1669,33 @@ main .footer p {
 }
 
 .why-choose-us::before {
-  border-radius: 10px;
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: var(--orange);
-  opacity: 0.4; /* Adjust the opacity as needed */
-  z-index: -1;
+  background: inherit; /* Hereda el fondo del contenedor */
+  filter: blur(5px); /* Ajusta el valor según tus necesidades */
+  z-index: -1; /* Asegúrate de que esté detrás del contenido */
 }
+
+
 
 .glassy-card {
   background: rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
+  border-radius: 20px;
   padding: 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.546);
+  backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(251, 168, 0, 0.641);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .glassy-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 8px 12px rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 12px rgba(241, 173, 0, 0.468);
 }
 
 .icon-title-container {
@@ -1699,4 +1739,122 @@ main .footer .credit {
     text-align: center;
   }
 }
+
 /*# sourceMappingURL=style.css.map */
+
+/* barra de navegación */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+} 
+nav{
+  display: flex;
+  height: 80px;
+  width: 100%;
+  background: #0A0A0A;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px 0 100px;
+  flex-wrap: wrap;
+}
+nav .logo{
+  color: #fff;
+  font-size: 35px;
+  font-weight: 600;
+}
+nav ul{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+nav ul li{
+  margin: 0 5px;
+}
+nav ul li a{
+  color: #f2f2f2;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+nav ul li a.active,
+nav ul li a:hover{
+  color: #111;
+  background: #fff;
+}
+nav .menu-btn i{
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+input[type="checkbox"]{
+  display: none;
+}
+@media (max-width: 1000px){
+  nav{
+    padding: 0 40px 0 50px;
+  }
+}
+@media (max-width: 920px) {
+  nav .menu-btn i{
+    display: block;
+  }
+  #click:checked ~ .menu-btn i:before{
+    content: "\f00d";
+  }
+  nav ul{
+    position: flex;
+    top: 100px;
+    left: -100%;
+    background: #111;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  #click:checked ~ ul{
+    left: 0;
+  }
+  nav ul li{
+    width: 100%;
+    margin: 40px 0;
+  }
+  nav ul li a{
+    width: 100%;
+    margin-left: -100%;
+    display: block;
+    font-size: 20px;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  #click:checked ~ ul li a{
+    margin-left: 0px;
+  }
+  nav ul li a.active,
+  nav ul li a:hover{
+    background: none;
+    color: rgb(255, 208, 0);
+  }
+}
+.content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: -1;
+  width: 100%;
+  padding: 0 30px;
+  color: #1b1b1b;
+}
+.content div{
+  font-size: 40px;
+  font-weight: 700;
+}
