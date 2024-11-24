@@ -38,6 +38,18 @@
     .rainbow-text {
         animation: rainbow 3s infinite;
     }
+
+    .original-price {
+    text-decoration: line-through; /* Línea en el medio */
+    color: rgba(158, 158, 158, 0.5); /* Color con transparencia */
+    background-color: transparent; /* Fondo transparente */
+}
+
+.new-price {
+    color: red; /* Color destacado para el nuevo precio */
+    font-weight: bold; /* Hacer el nuevo precio más prominente */
+}
+
 </style>
 
             <div id="circle-animation">
@@ -97,8 +109,13 @@
                 <!-- Ultimate Hosting Plan -->
                 <div class="cards__card card">
                   <h2 class="card__heading"><span style="color: #00B2E3;">MercadoPago</span></h2>
-                  <p class="card__price">$2000</p>
-                  <ul role="list" class="card__bullets flow">
+                  <p><i>Oferta VALIDA hasta el 01/12/24</i></p>
+                  <p><strong>ALIAS: <span style="color: red;">progamers.mp</span></strong></p>
+                  <p class="card__price">
+                    <span class="new-price rainbow-text">$1000</span> 
+                    <span class="original-price">$2000</span>
+                </p>                
+                 <ul role="list" class="card__bullets flow">
                     <li>Duración de membresía durante <strong><span style="color: rgb(29, 107, 241);"><u>2 meses</u></span></strong></li>
                     <li>Soporte <strong>personalizado</strong></li>
                     <li>Funciones <strong>exclusivas</strong> in-game</li>
@@ -128,7 +145,7 @@
       <img src="/assets/img/vertexcoach.png" alt="Descripción del ícono" style="width: 30px; height: auto; vertical-align: middle; margin-right: 10px;">
       <h4>Beneficios <strong>COACH</strong></h4>
   </div>
-      <p>Con tu <span style="color: red;"><u><strong>VIP</strong></u></span> posees funciones <strong>exclusivas</strong> en ciertos comandos como cambiar los <strong>teamkits e mapeados</strong> de un servidor destinado desde el <span style="color: #5865F2;"><strong>Discord</strong></span> </p>
+      <p>Con tu <span style="color: red;"><u><strong>VIP</strong></u></span> posees funciones <strong>exclusivas</strong> en ciertos comandos de nuestro sistema <strong>COACH</strong> en el que podés ejecutar comandos para un servidor destinado desde el <span style="color: #5865F2;"><strong>Discord</strong></span> </p>
       <p>❱ Sistema de <strong>CAMBIO</strong> de <strong>MAPEADO</strong> 🗺️</p>
       <p>❱ Sistema de <strong>CAMBIO</strong> de <strong>TEAMKITS</strong> 🎽</p>
       <p>❱ Sistema de <strong>SIGNEO</strong> a otras personas 🤝</p>
@@ -157,11 +174,25 @@
   </div>
 </div>
 
-<div class="scroll">
-  <h2><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#F19E39"><path d="M0 0h24v24H0z" fill="none"/><circle cx="12" cy="19" r="2"/><path d="M10 3h4v12h-4z"/></svg></h2><p><p id="text">
+<div class="scroll" style="width: 95%; height: auto; margin: auto; padding: 20px; background-color: #141414; border-radius: 10px;">
+  <h2>
+    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#F19E39">
+      <path d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="19" r="2"/>
+      <path d="M10 3h4v12h-4z"/>
+    </svg>
+  </h2>
+  <p id="text" style="margin-bottom: 20px;">
     Si ya realizaste tu <strong>votación</strong> u <strong>pago</strong> contactar con el Personal en el canal de tickets.
+    Se precisan al menos <strong>2 VOTACIONES</strong> para poder adquirir la membresía <strong>gratuitamente</strong>.
+  </p>
+  <p style="margin-bottom: 20px;">
     La duración del <span style="color: #5865F2;"><strong>VIP GRATUITO</strong></span> posee una duración de <strong>3 días</strong> habiles, luego se le revocará el rango.
-  </div>
+  </p>
+  <p style="margin-bottom: 20px;">
+    Una vez enviada la <strong>transferencia</strong> de dinero correspondiente, <strong>abrir ticket con el comprobante</strong> para chequear el pago correspondiente. En caso de que no estes fíado de este sistema, contactar con la <strong>Atención al Cliente</strong> de <span style="color: lightgreen;">WhatsApp</span> mediante este enlace: <a href="https://api.whatsapp.com/send?phone=5491133440561&text=Hola,%2C%20quisiera%20adquirir%20VIP%20para%20los%20servers%20de%20Vertex%20IOSoccer" target="_blank"><span style="color: lightblue;">Clickeame para llevarte al CHAT</span></a>
+  </p>
+</div>
 
                           </section>
                           <!-- beneficios vip end-->
